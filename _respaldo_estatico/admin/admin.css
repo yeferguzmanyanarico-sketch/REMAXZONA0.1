@@ -1,5 +1,5 @@
 :root{
-    --blue:#1768d5;
+    --blue:#375780;
     --blue-dark:#0f4fa8;
     --navy:#071b3b;
     --navy-soft:#102b55;
@@ -310,7 +310,7 @@ h1,h2,h3,p{
 }
 .list-head--agents,.item.agent-item{
     grid-template-columns:84px minmax(160px,1.35fr) 82px 105px 96px}
-    
+
 .item{
     min-height:95px;
     border-top:1px solid var(--line);

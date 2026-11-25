@@ -73,6 +73,22 @@ return [
             'replace_placeholders' => true,
         ],
 
+        'disponibilidad' => [
+            'driver' => 'daily',
+            'path' => storage_path('logs/disponibilidad.log'),
+            'level' => 'info',
+            'max_files' => 30,
+            'replace_placeholders' => true,
+        ],
+
+        'respaldos' => [
+            'driver' => 'daily',
+            'path' => storage_path('logs/respaldos.log'),
+            'level' => 'info',
+            'max_files' => 30,
+            'replace_placeholders' => true,
+        ],
+
         'monthly' => [
             'driver' => 'monthly',
             'path' => storage_path('logs/laravel.log'),

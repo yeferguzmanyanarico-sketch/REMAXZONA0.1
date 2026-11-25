@@ -3,11 +3,13 @@
 namespace Tests\Feature\Settings;
 
 use App\Livewire\Settings\Security;
-use App\Models\User;
+use App\Models\Usuario;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Hash;
 use Laravel\Fortify\Features;
+use Laravel\Fortify\Fortify;
 use Livewire\Livewire;
+use PragmaRX\Google2FA\Google2FA;
 use Tests\TestCase;
 
 class SecurityTest extends TestCase
@@ -18,77 +20,84 @@ class SecurityTest extends TestCase
     {
         parent::setUp();
 
-        /* @chisel-2fa */
         $this->skipUnlessFortifyHas(Features::twoFactorAuthentication());
 
         Features::twoFactorAuthentication([
             'confirm' => true,
             'confirmPassword' => true,
         ]);
-        /* @end-chisel-2fa */
-        /* @chisel-passkeys */
-        Features::passkeys([
-            'confirmPassword' => true,
-        ]);
-        /* @end-chisel-passkeys */
     }
 
     public function test_security_settings_page_can_be_rendered(): void
     {
-        $user = User::factory()->create();
+        $user = Usuario::factory()->create();
 
         $response = $this->actingAs($user)
-            /* @chisel-password-confirmation */
             ->withSession(['auth.password_confirmed_at' => time()])
-            /* @end-chisel-password-confirmation */
             ->get(route('security.edit'));
 
         $response->assertOk();
-
-        /* @chisel-passkeys */
-        $response->assertSee('Passkeys');
-        $response->assertSee('No passkeys yet');
-        /* @end-chisel-passkeys */
-        /* @chisel-2fa */
-        $response->assertSee('Two-factor authentication');
-        $response->assertSee('Enable 2FA');
-        /* @end-chisel-2fa */
+        $response->assertSee('Autenticación de dos factores (2FA)');
+        $response->assertSee('Actualizar contraseña');
     }
 
-    /* @chisel-password-confirmation */
     public function test_security_settings_page_requires_password_confirmation_when_enabled(): void
     {
-        $user = User::factory()->create();
+        $user = Usuario::factory()->create();
 
         $response = $this->actingAs($user)
             ->get(route('security.edit'));
 
         $response->assertRedirect(route('password.confirm'));
     }
-    /* @end-chisel-password-confirmation */
 
-    public function test_security_settings_page_renders_without_two_factor_when_feature_is_disabled(): void
+    public function test_two_factor_authentication_can_be_enabled_confirmed_and_disabled(): void
     {
-        config(['fortify.features' => []]);
+        $user = Usuario::factory()->create([
+            'password' => Hash::make('password'),
+        ]);
 
-        $user = User::factory()->create();
+        $this->actingAs($user);
 
-        $this->actingAs($user)
-            /* @chisel-password-confirmation */
-            ->withSession(['auth.password_confirmed_at' => time()])
-            /* @end-chisel-password-confirmation */
-            ->get(route('security.edit'))
-            ->assertOk()
-            ->assertSee('Update password')
-            ->assertDontSee('Manage your passkeys for passwordless sign-in')
-            ->assertDontSee('Add a passkey to sign in without a password')
-            ->assertDontSee('Two-factor authentication');
+        $component = Livewire::test(Security::class)
+            ->set('passwordConfirmacion2FA', 'password')
+            ->call('habilitarDosFactores')
+            ->assertHasNoErrors()
+            ->assertSet('mostrandoConfirmacion2FA', true);
+
+        $user->refresh();
+        $this->assertNotNull($user->two_factor_secret);
+        $this->assertNull($user->two_factor_confirmed_at);
+
+        // Generar código TOTP válido con el secreto recién creado
+        $secret = Fortify::currentEncrypter()->decrypt($user->two_factor_secret);
+        $google2fa = new Google2FA();
+        $validCode = $google2fa->getCurrentOtp($secret);
+
+        $component
+            ->set('codigoConfirmacion2FA', $validCode)
+            ->call('confirmarDosFactores')
+            ->assertHasNoErrors()
+            ->assertSet('twoFactorEnabled', true)
+            ->assertSet('mostrandoConfirmacion2FA', false);
+
+        $user->refresh();
+        $this->assertTrue($user->hasEnabledTwoFactorAuthentication());
+
+        // Desactivar 2FA validando contraseña actual
+        $component
+            ->set('passwordConfirmacion2FA', 'password')
+            ->call('desactivarDosFactores')
+            ->assertHasNoErrors()
+            ->assertSet('twoFactorEnabled', false);
+
+        $user->refresh();
+        $this->assertFalse($user->hasEnabledTwoFactorAuthentication());
     }
 
-    /* @chisel-2fa */
     public function test_two_factor_authentication_disabled_when_confirmation_abandoned_between_requests(): void
     {
-        $user = User::factory()->create();
+        $user = Usuario::factory()->create();
 
         $user->forceFill([
             'two_factor_secret' => encrypt('test-secret'),
@@ -102,17 +111,16 @@ class SecurityTest extends TestCase
 
         $component->assertSet('twoFactorEnabled', false);
 
-        $this->assertDatabaseHas('users', [
+        $this->assertDatabaseHas('usuarios', [
             'id' => $user->id,
             'two_factor_secret' => null,
             'two_factor_recovery_codes' => null,
         ]);
     }
-    /* @end-chisel-2fa */
 
     public function test_password_can_be_updated(): void
     {
-        $user = User::factory()->create([
+        $user = Usuario::factory()->create([
             'password' => Hash::make('password'),
         ]);
 
@@ -120,18 +128,18 @@ class SecurityTest extends TestCase
 
         $response = Livewire::test(Security::class)
             ->set('current_password', 'password')
-            ->set('password', 'new-password')
-            ->set('password_confirmation', 'new-password')
+            ->set('password', 'new-password-123')
+            ->set('password_confirmation', 'new-password-123')
             ->call('updatePassword');
 
         $response->assertHasNoErrors();
 
-        $this->assertTrue(Hash::check('new-password', $user->refresh()->password));
+        $this->assertTrue(Hash::check('new-password-123', $user->refresh()->password));
     }
 
     public function test_correct_password_must_be_provided_to_update_password(): void
     {
-        $user = User::factory()->create([
+        $user = Usuario::factory()->create([
             'password' => Hash::make('password'),
         ]);
 
@@ -139,8 +147,8 @@ class SecurityTest extends TestCase
 
         $response = Livewire::test(Security::class)
             ->set('current_password', 'wrong-password')
-            ->set('password', 'new-password')
-            ->set('password_confirmation', 'new-password')
+            ->set('password', 'new-password-123')
+            ->set('password_confirmation', 'new-password-123')
             ->call('updatePassword');
 
         $response->assertHasErrors(['current_password']);

@@ -15,7 +15,7 @@
         <button type="button" wire:click="nuevaPropiedad">＋ Agregar propiedad</button>
     </div>
 
-    <div class="management-layout">
+    <div class="management-layout management-layout--master-detail">
         <div class="data-area">
             <div class="list-toolbar">
                 <input
@@ -40,7 +40,7 @@
 
             <div class="content-list">
                 @forelse($propiedades as $propiedad)
-                    <article class="item property-item {{ $propiedad->destacada ? 'is-featured-row' : '' }}" wire:key="propiedad-{{ $propiedad->id }}">
+                    <article class="item property-item {{ $propiedad->destacada ? 'is-featured-row' : '' }} {{ $mostrarFormulario && $propiedadId === $propiedad->id ? 'is-editing-row' : '' }}" wire:key="propiedad-{{ $propiedad->id }}">
                         <img src="{{ $propiedad->url_imagen }}" alt="{{ $propiedad->nombre }}">
                         <div>
                             <h3>
@@ -82,7 +82,13 @@
                                 aria-pressed="{{ $propiedad->destacada ? 'true' : 'false' }}"
                                 wire:click="alternarDestacada({{ $propiedad->id }})"
                             >{{ $propiedad->destacada ? '★' : '☆' }}</button>
-                            <button type="button" title="Editar" wire:click="editarPropiedad({{ $propiedad->id }})">✎</button>
+                            <button
+                                type="button"
+                                title="Editar"
+                                aria-label="Editar {{ $propiedad->nombre }}"
+                                aria-pressed="{{ $mostrarFormulario && $propiedadId === $propiedad->id ? 'true' : 'false' }}"
+                                wire:click="editarPropiedad({{ $propiedad->id }})"
+                            >✎</button>
                             <button
                                 type="button"
                                 class="delete"
@@ -101,9 +107,21 @@
         </div>
 
         @if($mostrarFormulario)
-            <form class="content-form editor-panel" wire:submit="guardarPropiedad">
+            <form
+                class="content-form editor-panel editor-panel--master-detail is-open"
+                wire:submit="guardarPropiedad"
+                wire:key="form-propiedad-{{ $propiedadId ?? 'nueva' }}"
+            >
                 <div class="form-header">
-                    <h2>{{ $propiedadId ? 'Editar propiedad' : 'Nueva propiedad' }}</h2>
+                    <div class="form-header-title">
+                        <button class="btn-secondary mobile-back-btn" type="button" wire:click="limpiarFormulario">
+                            ← Volver al listado
+                        </button>
+                        <h2>{{ $propiedadId ? 'Editar propiedad' : 'Nueva propiedad' }}</h2>
+                        @if($propiedadId)
+                            <span class="editing-id-badge">ID #{{ $propiedadId }}</span>
+                        @endif
+                    </div>
                     <button class="icon-button" type="button" wire:click="limpiarFormulario" aria-label="Cerrar editor">×</button>
                 </div>
 
@@ -183,15 +201,24 @@
                     <span>Visible en el sitio público</span>
                 </label>
 
-                <button type="submit" wire:loading.attr="disabled">
-                    <span wire:loading.remove>Guardar cambios</span>
-                    <span wire:loading>Guardando...</span>
-                </button>
+                <div class="editor-form-actions">
+                    <button type="submit" class="btn-primary" wire:loading.attr="disabled">
+                        <span wire:loading.remove>Guardar cambios</span>
+                        <span wire:loading>Guardando...</span>
+                    </button>
+                    <button type="button" class="btn-secondary" wire:click="limpiarFormulario">
+                        Cancelar
+                    </button>
+                </div>
             </form>
         @else
-            <div class="editor-panel" style="color: var(--muted); text-align: center;">
+            <div class="editor-panel editor-panel--master-detail" style="color: var(--muted); text-align: center;">
                 <p>Selecciona una propiedad para editarla o haz clic en <strong>«＋ Agregar propiedad»</strong>.</p>
             </div>
         @endif
     </div>
+
+    @if($mostrarFormulario)
+        <div class="master-detail-backdrop" wire:click="limpiarFormulario" aria-hidden="true"></div>
+    @endif
 </section>

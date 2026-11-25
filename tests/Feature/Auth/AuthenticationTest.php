@@ -2,9 +2,10 @@
 
 namespace Tests\Feature\Auth;
 
-use App\Models\User;
+use App\Livewire\Autenticacion\IniciarSesion;
+use App\Models\Usuario;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Laravel\Fortify\Features;
+use Livewire\Livewire;
 use Tests\TestCase;
 
 class AuthenticationTest extends TestCase
@@ -20,63 +21,52 @@ class AuthenticationTest extends TestCase
 
     public function test_users_can_authenticate_using_the_login_screen(): void
     {
-        $user = User::factory()->create();
+        $user = Usuario::factory()->create();
 
-        $response = $this->post(route('login.store'), [
-            'email' => $user->email,
-            'password' => 'password',
-        ]);
+        Livewire::test(IniciarSesion::class)
+            ->set('correo', $user->correo)
+            ->set('password', 'password')
+            ->call('autenticar')
+            ->assertHasNoErrors()
+            ->assertRedirect(route('admin.propiedades'));
 
-        $response
-            ->assertSessionHasNoErrors()
-            ->assertRedirect(route('dashboard', absolute: false));
-
-        $this->assertAuthenticated();
+        $this->assertAuthenticatedAs($user);
     }
 
     public function test_users_can_not_authenticate_with_invalid_password(): void
     {
-        $user = User::factory()->create();
+        $user = Usuario::factory()->create();
 
-        $response = $this->post(route('login.store'), [
-            'email' => $user->email,
-            'password' => 'wrong-password',
-        ]);
-
-        $response->assertSessionHasErrorsIn('email');
+        Livewire::test(IniciarSesion::class)
+            ->set('correo', $user->correo)
+            ->set('password', 'wrong-password')
+            ->call('autenticar')
+            ->assertHasErrors(['correo']);
 
         $this->assertGuest();
     }
 
-    /* @chisel-2fa */
-    public function test_users_with_two_factor_enabled_are_redirected_to_two_factor_challenge(): void
+    public function test_users_with_two_factor_enabled_are_prompted_for_two_factor_challenge(): void
     {
-        $this->skipUnlessFortifyHas(Features::twoFactorAuthentication());
+        $user = Usuario::factory()->withTwoFactor()->create();
 
-        Features::twoFactorAuthentication([
-            'confirm' => true,
-            'confirmPassword' => true,
-        ]);
+        Livewire::test(IniciarSesion::class)
+            ->set('correo', $user->correo)
+            ->set('password', 'password')
+            ->call('autenticar')
+            ->assertSet('requiereDesafio2FA', true)
+            ->assertSet('usuarioDesafioId', $user->id);
 
-        $user = User::factory()->withTwoFactor()->create();
-
-        $response = $this->post(route('login.store'), [
-            'email' => $user->email,
-            'password' => 'password',
-        ]);
-
-        $response->assertRedirect(route('two-factor.login'));
         $this->assertGuest();
     }
-    /* @end-chisel-2fa */
 
     public function test_users_can_logout(): void
     {
-        $user = User::factory()->create();
+        $user = Usuario::factory()->create();
 
         $response = $this->actingAs($user)->post(route('logout'));
 
-        $response->assertRedirect(route('home'));
+        $response->assertRedirect(route('login'));
 
         $this->assertGuest();
     }

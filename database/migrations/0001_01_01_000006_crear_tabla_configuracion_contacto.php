@@ -22,11 +22,13 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        DB::statement("
-            ALTER TABLE `configuracion_contacto`
-            ADD CONSTRAINT `chk_configuracion_unica`
-            CHECK (`id` = 1)
-        ");
+        if (DB::getDriverName() === 'mysql' || DB::getDriverName() === 'mariadb') {
+            DB::statement("
+                ALTER TABLE `configuracion_contacto`
+                ADD CONSTRAINT `chk_configuracion_unica`
+                CHECK (`id` = 1)
+            ");
+        }
     }
 
     public function down(): void

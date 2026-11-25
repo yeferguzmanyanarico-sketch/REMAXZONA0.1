@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Publico;
 
+use App\Models\Agente;
 use App\Models\ConfiguracionContacto;
 use App\Models\RankingMensual;
 use Livewire\Attributes\Layout;
@@ -26,11 +27,19 @@ class PaginaEmpresa extends Component
             ->whereNotNull('fecha_publicacion')
             ->first();
 
+        $agentesActivos = Agente::where('activo', true)
+            ->orderBy('nombres')
+            ->orderBy('apellidos')
+            ->get();
+
         $contacto = ConfiguracionContacto::obtenerUnica();
 
         return view('livewire.publico.pagina-empresa', [
             'rankingPublicado' => $rankingPublicado,
+            'agentesActivos' => $agentesActivos,
             'contacto' => $contacto,
+        ])->layoutData([
+            'metaDescription' => 'Conoce la historia, misión, visión, valores y directorio de agentes inmobiliarios de RE/MAX Zona.',
         ]);
     }
 }

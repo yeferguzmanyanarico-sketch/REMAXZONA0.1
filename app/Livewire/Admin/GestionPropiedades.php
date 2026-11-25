@@ -112,6 +112,7 @@ class GestionPropiedades extends Component
 
         if ($this->imagenArchivo) {
             $rutaImagenNueva = $this->imagenArchivo->store('propiedades', 'public');
+            app(\App\Services\ServicioOptimizacionImagen::class)->generarWebpDesdeDiscoPublico($rutaImagenNueva, 1200);
             $rutaImagen = $rutaImagenNueva;
             if ($this->propiedadId && $this->imagenActual && $this->imagenActual !== $rutaImagen) {
                 $imagenAnteriorParaBorrar = $this->imagenActual;

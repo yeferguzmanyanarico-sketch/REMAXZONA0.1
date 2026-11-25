@@ -20,6 +20,8 @@ class PaginaOficinas extends Component
         return view('livewire.publico.pagina-oficinas', [
             'contacto' => $contacto,
             'oficinas' => $oficinas,
+        ])->layoutData([
+            'metaDescription' => 'Ubica nuestras oficinas RE/MAX Zona en Puno, Juliaca, Cusco y Arequipa y accede a su catálogo inmobiliario.',
         ]);
     }
 }

@@ -124,13 +124,19 @@
                 <div class="price-grid" style="grid-template-columns: 1fr 1fr;">
                     <label>
                         Teléfono (opcional)
-                        <input type="text" wire:model="telefono" maxlength="30" placeholder="Ej. +51 999 999 999">
+                        <div class="phone-input-group">
+                            <span class="phone-prefix" aria-hidden="true">+51</span>
+                            <input type="tel" wire:model="telefono" maxlength="25" placeholder="Ej. 999 999 999">
+                        </div>
                         @error('telefono') <span class="field-error">{{ $message }}</span> @enderror
                     </label>
 
                     <label>
                         WhatsApp (opcional, solo dígitos)
-                        <input type="text" wire:model="whatsapp" maxlength="20" placeholder="Ej. 51999999999">
+                        <div class="phone-input-group">
+                            <span class="phone-prefix" aria-hidden="true">+51</span>
+                            <input type="tel" wire:model="whatsapp" maxlength="15" placeholder="Ej. 999999999">
+                        </div>
                         @error('whatsapp') <span class="field-error">{{ $message }}</span> @enderror
                     </label>
                 </div>

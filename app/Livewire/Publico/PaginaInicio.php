@@ -42,6 +42,9 @@ class PaginaInicio extends Component
             'propiedadesDestacadas' => $propiedadesDestacadas,
             'contacto' => $contacto,
             'portada' => $portada,
+        ])->layoutData([
+            'metaDescription' => 'RE/MAX Zona Inmobiliaria: asesoría profesional en compra, venta, alquiler e inversión de propiedades en Puno, Juliaca, Cusco y Arequipa.',
+            'ogImage' => $portada->url_imagen ?? asset('images/CONTENEDOR.png'),
         ]);
     }
 }

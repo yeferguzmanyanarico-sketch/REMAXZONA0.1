@@ -21,19 +21,28 @@
 
             <label>
                 Teléfono visible en pie de página
-                <input type="text" wire:model="telefono_visible" maxlength="30" placeholder="+51 999 999 999" required>
+                <div class="phone-input-group">
+                    <span class="phone-prefix" aria-hidden="true">+51</span>
+                    <input type="tel" wire:model="telefono_visible" maxlength="25" placeholder="Ej. 999 999 999" required>
+                </div>
                 @error('telefono_visible') <span class="field-error">{{ $message }}</span> @enderror
             </label>
 
             <label>
-                WhatsApp general (solo dígitos con código de país, ej. 51999999999)
-                <input type="text" wire:model="whatsapp_general" maxlength="20" required>
+                WhatsApp general (solo dígitos locales)
+                <div class="phone-input-group">
+                    <span class="phone-prefix" aria-hidden="true">+51</span>
+                    <input type="tel" wire:model="whatsapp_general" maxlength="15" placeholder="Ej. 999999999" required>
+                </div>
                 @error('whatsapp_general') <span class="field-error">{{ $message }}</span> @enderror
             </label>
 
             <label>
-                WhatsApp para botón «Postular por WhatsApp» (solo dígitos con código de país)
-                <input type="text" wire:model="whatsapp_postulacion" maxlength="20" required>
+                WhatsApp para botón «Postular por WhatsApp» (solo dígitos locales)
+                <div class="phone-input-group">
+                    <span class="phone-prefix" aria-hidden="true">+51</span>
+                    <input type="tel" wire:model="whatsapp_postulacion" maxlength="15" placeholder="Ej. 999999999" required>
+                </div>
                 @error('whatsapp_postulacion') <span class="field-error">{{ $message }}</span> @enderror
             </label>
 

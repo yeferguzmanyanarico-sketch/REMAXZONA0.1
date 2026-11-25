@@ -23,15 +23,17 @@ return new class extends Migration
             $table->index(['activo', 'id'], 'idx_propiedades_activo');
         });
 
-        DB::statement("
-            ALTER TABLE `propiedades`
-            ADD CONSTRAINT `chk_propiedades_precio_moneda`
-            CHECK (
-                (`precio` IS NULL AND `moneda` IS NULL)
-                OR
-                (`precio` IS NOT NULL AND `precio` >= 0 AND `moneda` IS NOT NULL AND `moneda` IN ('PEN', 'USD'))
-            )
-        ");
+        if (DB::getDriverName() === 'mysql' || DB::getDriverName() === 'mariadb') {
+            DB::statement("
+                ALTER TABLE `propiedades`
+                ADD CONSTRAINT `chk_propiedades_precio_moneda`
+                CHECK (
+                    (`precio` IS NULL AND `moneda` IS NULL)
+                    OR
+                    (`precio` IS NOT NULL AND `precio` >= 0 AND `moneda` IS NOT NULL AND `moneda` IN ('PEN', 'USD'))
+                )
+            ");
+        }
     }
 
     public function down(): void

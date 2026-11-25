@@ -2,41 +2,61 @@
 
 namespace Tests\Feature\Auth;
 
-use App\Models\User;
+use App\Livewire\Autenticacion\IniciarSesion;
+use App\Models\Usuario;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Laravel\Fortify\Features;
+use Laravel\Fortify\Contracts\TwoFactorAuthenticationProvider;
+use Laravel\Fortify\Fortify;
+use Livewire\Livewire;
+use PragmaRX\Google2FA\Google2FA;
 use Tests\TestCase;
 
 class TwoFactorChallengeTest extends TestCase
 {
     use RefreshDatabase;
 
-    protected function setUp(): void
+    public function test_two_factor_challenge_can_be_completed_with_valid_totp_code(): void
     {
-        parent::setUp();
+        $google2fa = new Google2FA();
+        $secret = $google2fa->generateSecretKey(16);
 
-        $this->skipUnlessFortifyHas(Features::twoFactorAuthentication());
-    }
-
-    public function test_two_factor_challenge_redirects_to_login_when_not_authenticated(): void
-    {
-        $response = $this->get(route('two-factor.login'));
-
-        $response->assertRedirect(route('login'));
-    }
-
-    public function test_two_factor_challenge_can_be_rendered(): void
-    {
-        Features::twoFactorAuthentication([
-            'confirm' => true,
-            'confirmPassword' => true,
+        $user = Usuario::factory()->create([
+            'two_factor_secret' => Fortify::currentEncrypter()->encrypt($secret),
+            'two_factor_recovery_codes' => Fortify::currentEncrypter()->encrypt(json_encode(['REC-CODE-1', 'REC-CODE-2'])),
+            'two_factor_confirmed_at' => now(),
         ]);
 
-        $user = User::factory()->withTwoFactor()->create();
+        $validCode = $google2fa->getCurrentOtp($secret);
 
-        $this->post(route('login.store'), [
-            'email' => $user->email,
-            'password' => 'password',
-        ])->assertRedirect(route('two-factor.login'));
+        Livewire::test(IniciarSesion::class)
+            ->set('correo', $user->correo)
+            ->set('password', 'password')
+            ->call('autenticar')
+            ->assertSet('requiereDesafio2FA', true)
+            ->set('codigo2FA', $validCode)
+            ->call('verificarDesafio2FA', app(TwoFactorAuthenticationProvider::class))
+            ->assertHasNoErrors()
+            ->assertRedirect(route('admin.propiedades'));
+
+        $this->assertAuthenticatedAs($user);
+    }
+
+    public function test_two_factor_challenge_can_be_completed_with_recovery_code(): void
+    {
+        $user = Usuario::factory()->withTwoFactor()->create();
+
+        Livewire::test(IniciarSesion::class)
+            ->set('correo', $user->correo)
+            ->set('password', 'password')
+            ->call('autenticar')
+            ->assertSet('requiereDesafio2FA', true)
+            ->call('alternarModoRecuperacion2FA')
+            ->set('codigoRecuperacion2FA', 'recovery-code-1')
+            ->call('verificarDesafio2FA', app(TwoFactorAuthenticationProvider::class))
+            ->assertHasNoErrors()
+            ->assertRedirect(route('admin.propiedades'));
+
+        $this->assertAuthenticatedAs($user);
+        $this->assertNotContains('recovery-code-1', $user->fresh()->recoveryCodes());
     }
 }

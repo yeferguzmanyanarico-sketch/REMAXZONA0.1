@@ -3,28 +3,47 @@
 namespace App\Livewire\Admin;
 
 use App\Models\RankingMensual;
-use App\Models\Vendedor;
 use App\Services\ServicioRankingMensual;
+use App\Support\TelefonoPeru;
 use DomainException;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 use Throwable;
 
 #[Layout('components.layouts.admin')]
 #[Title('Ranking Mensual | RE/MAX Zona')]
 class GestionRankingActual extends Component
 {
-    public ?int $puesto1 = null;
-    public ?int $puesto2 = null;
-    public ?int $puesto3 = null;
+    use WithFileUploads;
+
+    /**
+     * @var array<int, array{nombres: string, apellidos: string, celular: string, codigo_interno: ?string, url_foto_actual: ?string, registrado: bool}>
+     */
+    public array $puestos = [];
+
+    public $foto1 = null;
+
+    public $foto2 = null;
+
+    public $foto3 = null;
+
+    /** @var array<int, ?string> */
+    public array $advertenciasHomonimo = [1 => null, 2 => null, 3 => null];
 
     public ?string $mensajeExito = null;
+
     public ?string $mensajeError = null;
 
     public function mount(ServicioRankingMensual $servicio): void
     {
+        $usuario = Auth::user();
+        if (! $usuario || ! $usuario->activo || (! $usuario->esAdministrador() && ! $usuario->esMarketing())) {
+            abort(403, 'No tienes permisos para acceder al módulo de Ranking Mensual.');
+        }
+
         $servicio->sincronizarEstadosVencidos();
         $this->cargarDatosDelPeriodoActual();
     }
@@ -38,70 +57,114 @@ class GestionRankingActual extends Component
             ->where('mes_desempeno', $periodo['mes_desempeno'])
             ->first();
 
-        if ($ranking) {
-            $posiciones = $ranking->posiciones->keyBy('puesto');
-            $this->puesto1 = $posiciones->get(1)?->vendedor_id;
-            $this->puesto2 = $posiciones->get(2)?->vendedor_id;
-            $this->puesto3 = $posiciones->get(3)?->vendedor_id;
+        $posiciones = $ranking ? $ranking->posiciones->keyBy('puesto') : collect();
+
+        foreach ([1, 2, 3] as $numeroPuesto) {
+            $pos = $posiciones->get($numeroPuesto);
+            $this->puestos[$numeroPuesto] = [
+                'nombres' => $pos?->nombres_snapshot ?? '',
+                'apellidos' => $pos?->apellidos_snapshot ?? '',
+                'celular' => TelefonoPeru::quitarPrefijo($pos?->celular_snapshot),
+                'codigo_interno' => $pos?->codigo_interno,
+                'url_foto_actual' => $pos?->url_foto_snapshot,
+                'registrado' => $pos !== null,
+            ];
         }
     }
 
-    public function guardarBorrador(ServicioRankingMensual $servicio): void
+    public function limpiarFotoPuesto(int $puesto): void
     {
-        $this->procesarGuardado($servicio, false);
+        if (! in_array($puesto, [1, 2, 3], true)) {
+            return;
+        }
+
+        $campoFoto = "foto{$puesto}";
+        $this->{$campoFoto} = null;
+        $this->resetErrorBag($campoFoto);
     }
 
-    public function publicarRanking(ServicioRankingMensual $servicio): void
+    public function guardarPuesto(int $puesto, ServicioRankingMensual $servicio): void
     {
-        $this->procesarGuardado($servicio, true);
-    }
+        if (! in_array($puesto, [1, 2, 3], true)) {
+            return;
+        }
 
-    private function procesarGuardado(ServicioRankingMensual $servicio, bool $publicarDefinitivamente): void
-    {
         $this->mensajeExito = null;
         $this->mensajeError = null;
+        $this->advertenciasHomonimo[$puesto] = null;
 
         $servicio->sincronizarEstadosVencidos();
         $periodo = RankingMensual::periodoActual();
 
         if (! RankingMensual::dentroDePlazoDeGestion($periodo['anio_publicacion'], $periodo['mes_publicacion'])) {
             $this->mensajeError = 'El plazo de gestión (días 1 al 3 del mes) ha finalizado. El ranking se encuentra bloqueado.';
+
             return;
         }
 
+        $campoFoto = "foto{$puesto}";
+        $yaRegistrado = (bool) ($this->puestos[$puesto]['registrado'] ?? false);
+
         $this->validate([
-            'puesto1' => ['required', 'integer', 'exists:vendedores,id', 'different:puesto2', 'different:puesto3'],
-            'puesto2' => ['required', 'integer', 'exists:vendedores,id', 'different:puesto1', 'different:puesto3'],
-            'puesto3' => ['required', 'integer', 'exists:vendedores,id', 'different:puesto1', 'different:puesto2'],
+            "puestos.{$puesto}.nombres" => ['required', 'string', 'min:2', 'max:100'],
+            "puestos.{$puesto}.apellidos" => ['required', 'string', 'min:2', 'max:100'],
+            "puestos.{$puesto}.celular" => ['required', 'string', 'min:6', 'max:20'],
+            $campoFoto => $yaRegistrado
+                ? ['nullable', 'image', 'mimes:jpg,jpeg,png,webp', 'max:4096']
+                : ['required', 'image', 'mimes:jpg,jpeg,png,webp', 'max:4096'],
         ], [
-            'puesto1.required' => 'Selecciona al vendedor del Primer Puesto.',
-            'puesto2.required' => 'Selecciona al vendedor del Segundo Puesto.',
-            'puesto3.required' => 'Selecciona al vendedor del Tercer Puesto.',
-            'puesto1.different' => 'Un mismo vendedor no puede ocupar dos puestos en el mismo ranking.',
-            'puesto2.different' => 'Un mismo vendedor no puede ocupar dos puestos en el mismo ranking.',
-            'puesto3.different' => 'Un mismo vendedor no puede ocupar dos puestos en el mismo ranking.',
+            "puestos.{$puesto}.nombres.required" => 'Ingresa los nombres del participante.',
+            "puestos.{$puesto}.nombres.min" => 'Los nombres deben tener al menos 2 caracteres.',
+            "puestos.{$puesto}.apellidos.required" => 'Ingresa los apellidos del participante.',
+            "puestos.{$puesto}.apellidos.min" => 'Los apellidos deben tener al menos 2 caracteres.',
+            "puestos.{$puesto}.celular.required" => 'Ingresa el número de celular del participante.',
+            "puestos.{$puesto}.celular.min" => 'El número de celular debe tener al menos 6 caracteres.',
+            "{$campoFoto}.required" => 'Debes seleccionar una fotografía especial para este puesto.',
+            "{$campoFoto}.image" => 'El archivo seleccionado debe ser una imagen válida.',
+            "{$campoFoto}.mimes" => 'La fotografía debe estar en formato JPG, JPEG, PNG o WebP.',
+            "{$campoFoto}.max" => 'La fotografía no debe superar los 4 MB.',
         ]);
 
         try {
-            $ranking = $servicio->guardarOPublicarRanking(
+            $resultado = $servicio->guardarParticipantePuesto(
+                $puesto,
                 [
-                    1 => (int) $this->puesto1,
-                    2 => (int) $this->puesto2,
-                    3 => (int) $this->puesto3,
+                    'nombres' => (string) ($this->puestos[$puesto]['nombres'] ?? ''),
+                    'apellidos' => (string) ($this->puestos[$puesto]['apellidos'] ?? ''),
+                    'celular' => TelefonoPeru::formatearConPrefijo((string) ($this->puestos[$puesto]['celular'] ?? '')),
                 ],
                 (int) Auth::id(),
-                $publicarDefinitivamente
+                $this->{$campoFoto}
             );
 
-            $this->mensajeExito = $ranking->estado === RankingMensual::ESTADO_PUBLICADO
-                ? 'Ranking publicado y actualizado correctamente en el sitio público.'
-                : 'Borrador del ranking guardado correctamente.';
-
+            $this->{$campoFoto} = null;
+            $this->advertenciasHomonimo[$puesto] = $resultado['advertencia_homonimo'];
             $this->cargarDatosDelPeriodoActual();
+
+            $this->mensajeExito = "Participante del Puesto #{$puesto} guardado correctamente.";
+        } catch (DomainException $e) {
+            $this->addError("puestos.{$puesto}.celular", $e->getMessage());
+            $this->mensajeError = $e->getMessage();
+        } catch (Throwable $e) {
+            $this->mensajeError = 'Ocurrió un error al guardar el participante: ' . $e->getMessage();
+        }
+    }
+
+    public function publicarRanking(ServicioRankingMensual $servicio): void
+    {
+        $this->mensajeExito = null;
+        $this->mensajeError = null;
+
+        $servicio->sincronizarEstadosVencidos();
+
+        try {
+            $ranking = $servicio->publicarRankingActual((int) Auth::id());
+            $this->cargarDatosDelPeriodoActual();
+            $this->mensajeExito = 'Ranking publicado y actualizado correctamente en el sitio público.';
         } catch (DomainException $e) {
             $this->mensajeError = $e->getMessage();
         } catch (Throwable $e) {
-            $this->mensajeError = 'Ocurrió un error al procesar el ranking: ' . $e->getMessage();
+            $this->mensajeError = 'Ocurrió un error al publicar el ranking: ' . $e->getMessage();
         }
     }
 
@@ -115,19 +178,16 @@ class GestionRankingActual extends Component
             ->where('mes_desempeno', $periodo['mes_desempeno'])
             ->first();
 
-        $vendedoresActivos = Vendedor::where('activo', true)
-            ->orderBy('nombres')
-            ->orderBy('apellidos')
-            ->get();
-
         $nombreMesDesempeno = RankingMensual::NOMBRES_MESES[$periodo['mes_desempeno']] ?? $periodo['mes_desempeno'];
         $nombreMesPublicacion = RankingMensual::NOMBRES_MESES[$periodo['mes_publicacion']] ?? $periodo['mes_publicacion'];
+
+        $totalRegistrados = collect($this->puestos)->where('registrado', true)->count();
 
         return view('livewire.admin.gestion-ranking-actual', [
             'periodo' => $periodo,
             'dentroDePlazo' => $dentroDePlazo,
             'rankingActual' => $rankingActual,
-            'vendedoresActivos' => $vendedoresActivos,
+            'totalRegistrados' => $totalRegistrados,
             'etiquetaDesempeno' => "{$nombreMesDesempeno} {$periodo['anio_desempeno']}",
             'etiquetaPublicacion' => "{$nombreMesPublicacion} {$periodo['anio_publicacion']}",
             'ahoraLima' => now('America/Lima'),

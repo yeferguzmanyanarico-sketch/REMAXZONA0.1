@@ -87,6 +87,7 @@ class GestionVendedores extends Component
 
         if ($this->fotoArchivo) {
             $rutaFotoNueva = $this->fotoArchivo->store('vendedores/actual', 'public');
+            app(\App\Services\ServicioOptimizacionImagen::class)->generarWebpDesdeDiscoPublico($rutaFotoNueva, 600);
             $rutaFoto = $rutaFotoNueva;
             if ($this->vendedorId && $this->fotoActual && $this->fotoActual !== $rutaFoto) {
                 // Solo se reemplaza el archivo en vendedores/actual/; jamás se tocan las copias históricas en rankings/

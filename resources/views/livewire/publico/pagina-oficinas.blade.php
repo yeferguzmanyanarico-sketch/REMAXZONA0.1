@@ -18,7 +18,13 @@
                     @foreach($oficinas as $sede)
                         <article class="card office-card" wire:key="sede-publica-{{ $sede->id }}">
                             @if($sede->url_imagen)
-                                <img src="{{ $sede->url_imagen }}" alt="Oficina {{ $contacto->nombre_empresa }} {{ $sede->nombre }}">
+                                <x-imagen-optimizada
+                                    :ruta="$sede->imagen ?? ''"
+                                    :src="$sede->url_imagen"
+                                    alt="Oficina {{ $contacto->nombre_empresa }} {{ $sede->nombre }}"
+                                    width="600"
+                                    height="400"
+                                />
                             @else
                                 <div class="office-card__placeholder" role="img" aria-label="Oficina {{ $contacto->nombre_empresa }} {{ $sede->nombre }} — Espacio institucional">
                                     <span class="office-card__placeholder-eyebrow">{{ $contacto->nombre_empresa }}</span>

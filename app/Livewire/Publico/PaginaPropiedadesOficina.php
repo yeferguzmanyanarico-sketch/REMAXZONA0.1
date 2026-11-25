@@ -91,6 +91,12 @@ class PaginaPropiedadesOficina extends Component
             'totalActivasOficina' => $totalActivasOficina,
             'contacto' => $contacto,
             'sede' => $sede,
-        ])->title('Oficina ' . $this->nombreOficina . ' | Propiedades | RE/MAX Zona');
+        ])
+            ->title('Oficina ' . $this->nombreOficina . ' | Propiedades | RE/MAX Zona')
+            ->layoutData([
+                'metaDescription' => 'Propiedades disponibles en la oficina ' . $this->nombreOficina . ' de RE/MAX Zona. Consulta precios, ubicación y ficha oficial en RE/MAX Perú.',
+                'canonicalUrl' => route('oficinas.propiedades', $this->slugOficina),
+                'datosEstructurados' => Propiedad::construirDatosEstructuradosCatalogo($propiedades, 'Propiedades Oficina ' . $this->nombreOficina),
+            ]);
     }
 }

@@ -1,0 +1,6578 @@
+%PDF-1.4
+%âãÏÓ
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [ 8 0 R 10 0 R 12 0 R 14 0 R 16 0 R 18 0 R 20 0 R 22 0 R 24 0 R 26 0 R 28 0 R ] /Count 11 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding >>
+endobj
+7 0 obj
+<< /Length 8005 >>
+stream
+q
+0.960 0.980 1.000 rg
+0.000 0.240 0.650 RG 1.50 w
+42.00 598.89 511.28 195.00 re B
+Q
+q
+0.860 0.110 0.180 rg
+42.00 785.89 511.28 8.00 re f
+Q
+q
+0.860 0.110 0.180 rg
+58.00 761.89 235.00 16.00 re f
+Q
+BT
+/F2 8.00 Tf
+1.000 1.000 1.000 rg
+1 0 0 1 64.00 766.89 Tm
+(GUIA DE ESTUDIO Y MANUAL DE ARQUITECTURA) Tj
+ET
+BT
+/F2 19.00 Tf
+0.000 0.240 0.650 rg
+1 0 0 1 58.00 737.89 Tm
+(Sistema Web RE/MAX Zona Inmobiliaria) Tj
+ET
+BT
+/F2 10.50 Tf
+0.200 0.250 0.330 rg
+1 0 0 1 58.00 719.89 Tm
+(Explicación completa de todos sus componentes, páginas, base de datos, seguridad y funciones) Tj
+ET
+BT
+/F1 9.30 Tf
+0.150 0.200 0.280 rg
+1 0 0 1 58.00 699.89 Tm
+(Este documento explica de manera detallada y didáctica cómo está construida la página web de) Tj
+ET
+BT
+/F1 9.30 Tf
+0.150 0.200 0.280 rg
+1 0 0 1 58.00 686.89 Tm
+(RE/MAX Zona Inmobiliaria, qué función cumple cada carpeta y archivo del proyecto, cómo se conectan) Tj
+ET
+BT
+/F1 9.30 Tf
+0.150 0.200 0.280 rg
+1 0 0 1 58.00 673.89 Tm
+(las rutas con los componentes reactivos Livewire, cómo están diseñadas las 8 tablas de la base de) Tj
+ET
+BT
+/F1 9.30 Tf
+0.150 0.200 0.280 rg
+1 0 0 1 58.00 660.89 Tm
+(datos y cómo operan tanto el portal público como el panel administrativo.) Tj
+ET
+q
+0.750 0.820 0.900 rg
+58.00 644.89 479.28 0.60 re f
+Q
+BT
+/F2 8.50 Tf
+0.060 0.150 0.350 rg
+1 0 0 1 58.00 630.89 Tm
+(Backend Framework: Laravel 13 \(PHP 8.3 / 8.4\)) Tj
+ET
+BT
+/F2 8.50 Tf
+0.060 0.150 0.350 rg
+1 0 0 1 297.64 630.89 Tm
+(Motor Reactivo Full-Stack: Livewire 4 + Blade) Tj
+ET
+BT
+/F2 8.50 Tf
+0.060 0.150 0.350 rg
+1 0 0 1 58.00 616.89 Tm
+(Autenticación y Seguridad: Laravel Fortify \(2FA + Roles\)) Tj
+ET
+BT
+/F2 8.50 Tf
+0.060 0.150 0.350 rg
+1 0 0 1 297.64 616.89 Tm
+(Base de Datos: MySQL / SQLite \(Eloquent ORM + Triggers\)) Tj
+ET
+q
+0.000 0.240 0.650 rg
+42.00 552.89 511.28 22.00 re f
+Q
+q
+0.860 0.110 0.180 rg
+42.00 550.39 511.28 2.50 re f
+Q
+BT
+/F2 11.50 Tf
+1.000 1.000 1.000 rg
+1 0 0 1 52.00 559.89 Tm
+(1. Visión General y Arquitectura Tecnológica del Sistema) Tj
+ET
+BT
+/F1 9.40 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 42.00 531.49 Tm
+(El proyecto RE/MAX Zona Inmobiliaria es una aplicación web empresarial completa desarrollada con el) Tj
+ET
+BT
+/F1 9.40 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 42.00 518.52 Tm
+(stack TALL/Livewire moderno \(Laravel 13 + Livewire 4 + CSS institucional a medida\). A diferencia de una) Tj
+ET
+BT
+/F1 9.40 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 42.00 505.55 Tm
+(página web estática tradicional, este sistema integra dos entornos dinámicos conectados en tiempo real) Tj
+ET
+BT
+/F1 9.40 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 42.00 492.57 Tm
+(a una misma base de datos:) Tj
+ET
+q
+0.860 0.110 0.180 rg
+46.00 477.00 4.00 4.00 re f
+Q
+BT
+/F2 9.20 Tf
+0.050 0.150 0.350 rg
+1 0 0 1 56.00 474.80 Tm
+(1. Portal Público Institucional e Inmobiliario:) Tj
+ET
+BT
+/F1 9.20 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 302.14 474.80 Tm
+(Diseñado para compradores, vendedores,) Tj
+ET
+BT
+/F1 9.20 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 56.00 462.29 Tm
+(arrendatarios y postulantes a agentes. Permite explorar la portada dinámica, conocer el) Tj
+ET
+BT
+/F1 9.20 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 56.00 449.78 Tm
+(Ranking Top 3 de Vendedores del Mes, filtrar el catálogo general de propiedades en vivo sin) Tj
+ET
+BT
+/F1 9.20 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 56.00 437.27 Tm
+(recargar la página, consultar las 4 oficinas oficiales \(Arequipa, Lima, Moquegua y Puno\) con) Tj
+ET
+BT
+/F1 9.20 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 56.00 424.75 Tm
+(su propio catálogo por sede, revisar el Directorio Institucional de Agentes y comunicarse por) Tj
+ET
+BT
+/F1 9.20 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 56.00 412.24 Tm
+(WhatsApp o teléfono.) Tj
+ET
+q
+0.860 0.110 0.180 rg
+46.00 399.43 4.00 4.00 re f
+Q
+BT
+/F2 9.20 Tf
+0.050 0.150 0.350 rg
+1 0 0 1 56.00 397.23 Tm
+(2. Panel Administrativo Basado en Roles \(/admin\):) Tj
+ET
+BT
+/F1 9.20 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 312.45 397.23 Tm
+(Sistema interno protegido por inicio de) Tj
+ET
+BT
+/F1 9.20 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 56.00 384.72 Tm
+(sesión con bloqueo anti-fuerza bruta, Autenticación de Dos Factores \(2FA con código QR\) y) Tj
+ET
+BT
+/F1 9.20 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 56.00 372.21 Tm
+(control de permisos para dos roles: ADMINISTRADOR \(control total de los 9 módulos del sistema\)) Tj
+ET
+BT
+/F1 9.20 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 56.00 359.69 Tm
+(y MARKETING \(gestión comercial de Propiedades, Agentes y Ranking Mensual\). Incluye además) Tj
+ET
+BT
+/F1 9.20 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 56.00 347.18 Tm
+(soporte de Modo Claro y Modo Oscuro persistente por usuario.) Tj
+ET
+q
+0.965 0.978 0.995 rg
+0.750 0.820 0.920 RG 0.80 w
+42.00 196.77 511.28 140.60 re B
+Q
+q
+0.000 0.240 0.650 rg
+42.00 196.77 4.50 140.60 re f
+Q
+BT
+/F2 9.80 Tf
+0.000 0.220 0.600 rg
+1 0 0 1 54.00 322.37 Tm
+(¿Cómo funciona Livewire 4 dentro de esta página web?) Tj
+ET
+q
+0.750 0.820 0.920 rg
+54.00 318.37 489.28 0.50 re f
+Q
+q
+0.000 0.240 0.650 rg
+55.00 308.37 3.20 3.20 re f
+Q
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 306.37 Tm
+(En lugar de dividir el proyecto en dos repositorios separados \(un frontend en React/Vue y una API) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 294.17 Tm
+(REST\), cada pantalla o módulo de la web es un Componente Livewire compuesto por dos archivos que) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 281.97 Tm
+(trabajan en pareja:) Tj
+ET
+q
+0.000 0.240 0.650 rg
+55.00 268.77 3.20 3.20 re f
+Q
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 266.77 Tm
+(1\) Una clase PHP en app/Livewire/... que contiene las propiedades públicas \(estado\), las consultas a) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 254.57 Tm
+(la base de datos \(método render\) y las acciones de negocio \(guardar, filtrar, eliminar, publicar\).) Tj
+ET
+q
+0.000 0.240 0.650 rg
+55.00 241.37 3.20 3.20 re f
+Q
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 239.37 Tm
+(2\) Una vista HTML Blade en resources/views/livewire/... que muestra la interfaz y conecta los botones) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 227.17 Tm
+(o buscadores mediante directivas como wire:model.live \(búsqueda en tiempo real\) o wire:click) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 214.97 Tm
+(\(ejecución de métodos PHP sin recargar la página\).) Tj
+ET
+q
+0.000 0.240 0.650 rg
+42.00 160.77 511.28 22.00 re f
+Q
+q
+0.860 0.110 0.180 rg
+42.00 158.27 511.28 2.50 re f
+Q
+BT
+/F2 11.50 Tf
+1.000 1.000 1.000 rg
+1 0 0 1 52.00 167.77 Tm
+(2. Mapa de Directorios: ¿Dónde está cada lugar y qué función cumple?) Tj
+ET
+BT
+/F1 9.40 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 42.00 139.37 Tm
+(Para estudiar el código fuente ubicado en D:\\pagina web remax puno, la siguiente tabla resume) Tj
+ET
+BT
+/F1 9.40 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 42.00 126.40 Tm
+(exactamente qué contiene cada carpeta del proyecto y cuál es su responsabilidad:) Tj
+ET
+q
+0.000 0.240 0.650 rg
+0.000 0.240 0.650 RG 0.70 w
+42.00 97.83 511.28 20.00 re B
+Q
+BT
+/F2 8.60 Tf
+1.000 1.000 1.000 rg
+1 0 0 1 47.50 104.33 Tm
+(Carpeta / Archivo) Tj
+ET
+BT
+/F2 8.60 Tf
+1.000 1.000 1.000 rg
+1 0 0 1 206.00 104.33 Tm
+(Función y Responsabilidad dentro del Sistema Web) Tj
+ET
+q
+1.000 1.000 1.000 rg
+42.00 54.23 511.28 43.60 re f
+Q
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 54.23 158.50 43.60 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 85.43 Tm
+(app/Livewire/Publico/) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+200.50 54.23 352.78 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 206.00 85.43 Tm
+(Contiene las 6 clases PHP que controlan las páginas públicas: PaginaInicio,) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 206.00 74.23 Tm
+(PaginaEmpresa, PaginaPropiedades, PaginaOficinas, PaginaPropiedadesOficina y) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 206.00 63.03 Tm
+(PaginaContacto.) Tj
+ET
+q
+0.780 0.830 0.900 rg
+42.00 32.00 511.28 0.60 re f
+Q
+BT
+/F1 7.80 Tf
+0.400 0.450 0.550 rg
+1 0 0 1 42.00 21.00 Tm
+(Documento de Estudio - Arquitectura y Componentes de RE/MAX Zona Inmobiliaria) Tj
+ET
+BT
+/F2 8.00 Tf
+0.000 0.240 0.650 rg
+1 0 0 1 495.28 21.00 Tm
+(Página 1 de 11) Tj
+ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 11729 >>
+stream
+q
+0.750 0.800 0.880 rg
+42.00 807.89 511.28 0.80 re f
+Q
+BT
+/F2 7.50 Tf
+0.000 0.240 0.650 rg
+1 0 0 1 42.00 812.89 Tm
+(MANUAL DE ESTUDIO Y ARQUITECTURA - SISTEMA WEB RE/MAX ZONA INMOBILIARIA) Tj
+ET
+BT
+/F1 7.50 Tf
+0.400 0.450 0.550 rg
+1 0 0 1 458.28 812.89 Tm
+(Laravel 13 + Livewire 4) Tj
+ET
+q
+0.000 0.240 0.650 rg
+0.000 0.240 0.650 RG 0.70 w
+42.00 767.89 511.28 20.00 re B
+Q
+BT
+/F2 8.60 Tf
+1.000 1.000 1.000 rg
+1 0 0 1 47.50 774.39 Tm
+(Carpeta / Archivo) Tj
+ET
+BT
+/F2 8.60 Tf
+1.000 1.000 1.000 rg
+1 0 0 1 206.00 774.39 Tm
+(Función y Responsabilidad dentro del Sistema Web) Tj
+ET
+q
+0.960 0.975 0.995 rg
+42.00 724.29 511.28 43.60 re f
+Q
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 724.29 158.50 43.60 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 755.49 Tm
+(app/Livewire/Admin/) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+200.50 724.29 352.78 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 206.00 755.49 Tm
+(Contiene las 9 clases PHP del Panel Administrativo: GestionPropiedades,) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 206.00 744.29 Tm
+(GestionAgentes, GestionRankingActual, HistorialRankings, GestionOficinas,) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 206.00 733.09 Tm
+(GestionPortada, GestionContacto, GestionUsuarios y GestionVendedores.) Tj
+ET
+q
+1.000 1.000 1.000 rg
+42.00 691.89 511.28 32.40 re f
+Q
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 691.89 158.50 32.40 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 711.89 Tm
+(app/Livewire/Autenticacion/) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+200.50 691.89 352.78 32.40 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 206.00 711.89 Tm
+(Contiene IniciarSesion.php \(login con RateLimiter y desafío 2FA\) y) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 206.00 700.69 Tm
+(ConfirmarPassword.php \(confirmación de seguridad para zonas sensibles\).) Tj
+ET
+q
+0.960 0.975 0.995 rg
+42.00 648.29 511.28 43.60 re f
+Q
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 648.29 158.50 43.60 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 679.49 Tm
+(app/Livewire/Settings/) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+200.50 648.29 352.78 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 206.00 679.49 Tm
+(Contiene los 3 módulos de configuración personal del usuario logueado:) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 206.00 668.29 Tm
+(Profile.php \(nombre/correo\), Appearance.php \(Modo Claro/Oscuro\) y) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 206.00 657.09 Tm
+(Security.php \(cambio de clave y activación 2FA\).) Tj
+ET
+q
+1.000 1.000 1.000 rg
+42.00 604.69 511.28 43.60 re f
+Q
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 604.69 158.50 43.60 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 635.89 Tm
+(app/Models/) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+200.50 604.69 352.78 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 206.00 635.89 Tm
+(Contiene los Modelos Eloquent conectados a las tablas de la base de datos:) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 206.00 624.69 Tm
+(Usuario, Propiedad, Oficina, Agente, RankingMensual, PosicionRanking,) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 206.00 613.49 Tm
+(ConfiguracionContacto, ConfiguracionPortada y Vendedor.) Tj
+ET
+q
+0.960 0.975 0.995 rg
+42.00 549.89 511.28 54.80 re f
+Q
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 549.89 158.50 54.80 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 592.29 Tm
+(app/Services/) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+200.50 549.89 352.78 54.80 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 206.00 592.29 Tm
+(Capa de Servicios de Negocio: ServicioRankingMensual \(lógica de los 3) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 206.00 581.09 Tm
+(primeros días del mes\), ServicioOptimizacionImagen \(conversión automática a) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 206.00 569.89 Tm
+(WebP\), ServicioRespaldo \(backups ZIP + SQL con SHA-256\) y) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 206.00 558.69 Tm
+(ServicioDisponibilidad \(monitoreo de salud\).) Tj
+ET
+q
+1.000 1.000 1.000 rg
+42.00 506.29 511.28 43.60 re f
+Q
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 506.29 158.50 43.60 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 537.49 Tm
+(app/Http/Middleware/) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+200.50 506.29 352.78 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 206.00 537.49 Tm
+(Filtros de seguridad HTTP: VerificarRol.php \(verifica usuario activo y rol) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 206.00 526.29 Tm
+(ADMINISTRADOR o MARKETING\) y CabecerasSeguridad.php \(inyecta CSP, HSTS,) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 206.00 515.09 Tm
+(X-Frame-Options, nosniff\).) Tj
+ET
+q
+0.960 0.975 0.995 rg
+42.00 462.69 511.28 43.60 re f
+Q
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 462.69 158.50 43.60 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 493.89 Tm
+(app/Http/Controllers/) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+200.50 462.69 352.78 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 206.00 493.89 Tm
+(Contiene EstadoSistemaController.php, que atiende el endpoint GET /salud) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 206.00 482.69 Tm
+(devolviendo un JSON con el estado operativo de la app, la base de datos y el) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 206.00 471.49 Tm
+(disco.) Tj
+ET
+q
+1.000 1.000 1.000 rg
+42.00 430.29 511.28 32.40 re f
+Q
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 430.29 158.50 32.40 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 450.29 Tm
+(app/Console/Commands/) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+200.50 430.29 352.78 32.40 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 206.00 450.29 Tm
+(Comandos Artisan de mantenimiento y automatización: OptimizarImagenes,) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 206.00 439.09 Tm
+(RespaldarSistema, VerificarRespaldo y VerificarSaludSistema.) Tj
+ET
+q
+0.960 0.975 0.995 rg
+42.00 386.69 511.28 43.60 re f
+Q
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 386.69 158.50 43.60 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 417.89 Tm
+(app/Support/TelefonoPeru.php) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+200.50 386.69 352.78 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 206.00 417.89 Tm
+(Clase auxiliar que formatea cualquier teléfono peruano asegurando el prefijo) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 206.00 406.69 Tm
+(+51 para visualización y el prefijo 519... limpio para los enlaces wa.me/ de) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 206.00 395.49 Tm
+(WhatsApp.) Tj
+ET
+q
+1.000 1.000 1.000 rg
+42.00 343.09 511.28 43.60 re f
+Q
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 343.09 158.50 43.60 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 374.29 Tm
+(resources/views/) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+200.50 343.09 352.78 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 206.00 374.29 Tm
+(Contiene todas las vistas HTML Blade: los layouts maestros) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 206.00 363.09 Tm
+(\(layouts/publico.blade.php y layouts/admin.blade.php\), el componente) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 206.00 351.89 Tm
+(<x-imagen-optimizada> y las plantillas de cada componente Livewire.) Tj
+ET
+q
+0.960 0.975 0.995 rg
+42.00 310.69 511.28 32.40 re f
+Q
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 310.69 158.50 32.40 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 330.69 Tm
+(routes/web.php y settings.php) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+200.50 310.69 352.78 32.40 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 206.00 330.69 Tm
+(Archivos donde se registran todas las URLs públicas, el generador dinámico de) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 206.00 319.49 Tm
+(/sitemap.xml, el login/logout y las rutas protegidas de /admin y /settings.) Tj
+ET
+q
+1.000 1.000 1.000 rg
+42.00 267.09 511.28 43.60 re f
+Q
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 267.09 158.50 43.60 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 298.29 Tm
+(database/migrations/) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+200.50 267.09 352.78 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 206.00 298.29 Tm
+(Contiene las 13 migraciones numeradas que crean las tablas, claves foráneas,) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 206.00 287.09 Tm
+(índices compuestos, restricciones CHECK y Triggers MySQL de inmutabilidad) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 206.00 275.89 Tm
+(histórica.) Tj
+ET
+q
+0.960 0.975 0.995 rg
+42.00 223.49 511.28 43.60 re f
+Q
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 223.49 158.50 43.60 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 254.69 Tm
+(database/seeders/) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+200.50 223.49 352.78 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 206.00 254.69 Tm
+(DatabaseSeeder.php crea los 2 usuarios iniciales \(admin y marketing\), la) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 206.00 243.49 Tm
+(configuración de contacto, los vendedores iniciales y las 7 propiedades) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 206.00 232.29 Tm
+(reales de ejemplo.) Tj
+ET
+q
+1.000 1.000 1.000 rg
+42.00 179.89 511.28 43.60 re f
+Q
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 179.89 158.50 43.60 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 211.09 Tm
+(public/) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+200.50 179.89 352.78 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 206.00 211.09 Tm
+(Raíz pública del servidor web: hojas CSS \(css/styles.css y css/admin.css\),) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 206.00 199.89 Tm
+(imágenes institucionales \(public/images/\), robots.txt y reglas Apache de) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 206.00 188.69 Tm
+(caché/compresión \(.htaccess\).) Tj
+ET
+q
+0.960 0.975 0.995 rg
+42.00 136.29 511.28 43.60 re f
+Q
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 136.29 158.50 43.60 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 167.49 Tm
+(storage/app/) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+200.50 136.29 352.78 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 206.00 167.49 Tm
+(Almacenamiento de archivos: storage/app/public/ guarda las fotografías) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 206.00 156.29 Tm
+(subidas desde el panel y sus copias .webp; storage/app/private/respaldos/) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 206.00 145.09 Tm
+(guarda los backups privados fuera de internet.) Tj
+ET
+q
+0.000 0.240 0.650 rg
+42.00 98.29 511.28 22.00 re f
+Q
+q
+0.860 0.110 0.180 rg
+42.00 95.79 511.28 2.50 re f
+Q
+BT
+/F2 11.50 Tf
+1.000 1.000 1.000 rg
+1 0 0 1 52.00 105.29 Tm
+(3. Ciclo de Vida: ¿Cómo viaja una petición desde el navegador hasta la BD?) Tj
+ET
+BT
+/F1 9.40 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 42.00 76.89 Tm
+(Cuando una persona entra a una dirección de la web o hace clic en un botón, el sistema ejecuta este) Tj
+ET
+BT
+/F1 9.40 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 42.00 63.92 Tm
+(flujo ordenado de 5 etapas:) Tj
+ET
+q
+0.780 0.830 0.900 rg
+42.00 32.00 511.28 0.60 re f
+Q
+BT
+/F1 7.80 Tf
+0.400 0.450 0.550 rg
+1 0 0 1 42.00 21.00 Tm
+(Documento de Estudio - Arquitectura y Componentes de RE/MAX Zona Inmobiliaria) Tj
+ET
+BT
+/F2 8.00 Tf
+0.000 0.240 0.650 rg
+1 0 0 1 495.28 21.00 Tm
+(Página 2 de 11) Tj
+ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 12099 >>
+stream
+q
+0.750 0.800 0.880 rg
+42.00 807.89 511.28 0.80 re f
+Q
+BT
+/F2 7.50 Tf
+0.000 0.240 0.650 rg
+1 0 0 1 42.00 812.89 Tm
+(MANUAL DE ESTUDIO Y ARQUITECTURA - SISTEMA WEB RE/MAX ZONA INMOBILIARIA) Tj
+ET
+BT
+/F1 7.50 Tf
+0.400 0.450 0.550 rg
+1 0 0 1 458.28 812.89 Tm
+(Laravel 13 + Livewire 4) Tj
+ET
+q
+0.070 0.100 0.170 rg
+0.200 0.280 0.400 RG 0.80 w
+42.00 559.09 511.28 228.80 re B
+Q
+BT
+/F4 8.00 Tf
+0.920 0.960 1.000 rg
+1 0 0 1 52.00 773.89 Tm
+([1. NAVEGADOR] ---> Solicita una URL \(ej. GET /propiedades  o  GET /admin/ranking-actual\)) Tj
+ET
+BT
+/F4 8.00 Tf
+0.920 0.960 1.000 rg
+1 0 0 1 52.00 762.69 Tm
+(       |) Tj
+ET
+BT
+/F4 8.00 Tf
+0.920 0.960 1.000 rg
+1 0 0 1 52.00 751.49 Tm
+(       v) Tj
+ET
+BT
+/F4 8.00 Tf
+0.920 0.960 1.000 rg
+1 0 0 1 52.00 740.29 Tm
+([2. MIDDLEWARE DE SEGURIDAD] \(bootstrap/app.php & app/Http/Middleware/\)) Tj
+ET
+BT
+/F4 8.00 Tf
+0.920 0.960 1.000 rg
+1 0 0 1 52.00 729.09 Tm
+(    - CabecerasSeguridad.php agrega proteccion anti-XSS, anti-Clickjacking y CSP.) Tj
+ET
+BT
+/F4 8.00 Tf
+0.920 0.960 1.000 rg
+1 0 0 1 52.00 717.89 Tm
+(    - En rutas /admin, "auth" verifica la sesion y "rol:..." ejecuta VerificarRol.php.) Tj
+ET
+BT
+/F4 8.00 Tf
+0.920 0.960 1.000 rg
+1 0 0 1 52.00 706.69 Tm
+(       |) Tj
+ET
+BT
+/F4 8.00 Tf
+0.920 0.960 1.000 rg
+1 0 0 1 52.00 695.49 Tm
+(       v) Tj
+ET
+BT
+/F4 8.00 Tf
+0.920 0.960 1.000 rg
+1 0 0 1 52.00 684.29 Tm
+([3. ENRUTADOR] \(routes/web.php & routes/settings.php\)) Tj
+ET
+BT
+/F4 8.00 Tf
+0.920 0.960 1.000 rg
+1 0 0 1 52.00 673.09 Tm
+(    - Dirige la peticion directamente a la clase del Componente Livewire de esa URL.) Tj
+ET
+BT
+/F4 8.00 Tf
+0.920 0.960 1.000 rg
+1 0 0 1 52.00 661.89 Tm
+(       |) Tj
+ET
+BT
+/F4 8.00 Tf
+0.920 0.960 1.000 rg
+1 0 0 1 52.00 650.69 Tm
+(       v) Tj
+ET
+BT
+/F4 8.00 Tf
+0.920 0.960 1.000 rg
+1 0 0 1 52.00 639.49 Tm
+([4. COMPONENTE LIVEWIRE + MODELOS / SERVICIOS] \(app/Livewire/ -> app/Models/ & Services/\)) Tj
+ET
+BT
+/F4 8.00 Tf
+0.920 0.960 1.000 rg
+1 0 0 1 52.00 628.29 Tm
+(    - Ejecuta mount\(\) \(validacion inicial\) y render\(\) \(consultas Eloquent a la BD\).) Tj
+ET
+BT
+/F4 8.00 Tf
+0.920 0.960 1.000 rg
+1 0 0 1 52.00 617.09 Tm
+(    - Al guardar o filtrar: valida datos, convierte fotos a WebP y actualiza la BD.) Tj
+ET
+BT
+/F4 8.00 Tf
+0.920 0.960 1.000 rg
+1 0 0 1 52.00 605.89 Tm
+(       |) Tj
+ET
+BT
+/F4 8.00 Tf
+0.920 0.960 1.000 rg
+1 0 0 1 52.00 594.69 Tm
+(       v) Tj
+ET
+BT
+/F4 8.00 Tf
+0.920 0.960 1.000 rg
+1 0 0 1 52.00 583.49 Tm
+([5. VISTA BLADE + LAYOUT MAESTRO] \(resources/views/livewire/ + components/layouts/\)) Tj
+ET
+BT
+/F4 8.00 Tf
+0.920 0.960 1.000 rg
+1 0 0 1 52.00 572.29 Tm
+(    - Renderiza el HTML accesible \(WCAG 2.1 AA\), SEO / JSON-LD y <picture> WebP.) Tj
+ET
+q
+0.000 0.240 0.650 rg
+42.00 523.09 511.28 22.00 re f
+Q
+q
+0.860 0.110 0.180 rg
+42.00 520.59 511.28 2.50 re f
+Q
+BT
+/F2 11.50 Tf
+1.000 1.000 1.000 rg
+1 0 0 1 52.00 530.09 Tm
+(4. Base de Datos y Modelos Eloquent \(Explicación de las Tablas\)) Tj
+ET
+BT
+/F1 9.40 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 42.00 501.69 Tm
+(El modelo de datos ha sido diseñado con integridad referencial, restricciones CHECK a nivel de motor de) Tj
+ET
+BT
+/F1 9.40 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 42.00 488.72 Tm
+(base de datos y validaciones de dominio en el método booted\(\) de los Modelos Eloquent. A continuación) Tj
+ET
+BT
+/F1 9.40 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 42.00 475.75 Tm
+(se detalla cada tabla y modelo:) Tj
+ET
+q
+0.000 0.240 0.650 rg
+0.000 0.240 0.650 RG 0.70 w
+42.00 447.17 511.28 20.00 re B
+Q
+BT
+/F2 8.60 Tf
+1.000 1.000 1.000 rg
+1 0 0 1 47.50 453.67 Tm
+(Modelo / Tabla BD) Tj
+ET
+BT
+/F2 8.60 Tf
+1.000 1.000 1.000 rg
+1 0 0 1 149.76 453.67 Tm
+(Columnas Clave) Tj
+ET
+BT
+/F2 8.60 Tf
+1.000 1.000 1.000 rg
+1 0 0 1 303.14 453.67 Tm
+(Función Exacta y Reglas Programadas en el Modelo) Tj
+ET
+q
+1.000 1.000 1.000 rg
+42.00 369.97 511.28 77.20 re f
+Q
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 369.97 102.26 77.20 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 434.77 Tm
+(Usuario) Tj
+ET
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 423.57 Tm
+(\(tabla: usuarios\)) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+144.26 369.97 153.38 77.20 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 149.76 434.77 Tm
+(id, nombre, correo \(único\),) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 149.76 423.57 Tm
+(password, rol \(ADMINISTRADOR |) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 149.76 412.37 Tm
+(MARKETING\), activo, tema \(claro) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 149.76 401.17 Tm
+(| oscuro\), two_factor_secret,) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 149.76 389.97 Tm
+(two_factor_recovery_codes,) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 149.76 378.77 Tm
+(two_factor_confirmed_at) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+297.64 369.97 255.64 77.20 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 303.14 434.77 Tm
+(Gestiona las cuentas del panel administrativo. Usa el) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 303.14 423.57 Tm
+(trait TwoFactorAuthenticatable de Fortify. Incluye los) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 303.14 412.37 Tm
+(métodos esAdministrador\(\), esMarketing\(\) y) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 303.14 401.17 Tm
+(usaTemaOscuro\(\). La contraseña siempre se almacena) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 303.14 389.97 Tm
+(encriptada con bcrypt/argon \(cast "hashed"\).) Tj
+ET
+q
+0.960 0.975 0.995 rg
+42.00 303.97 511.28 66.00 re f
+Q
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 303.97 102.26 66.00 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 357.57 Tm
+(Propiedad) Tj
+ET
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 346.37 Tm
+(\(tabla:) Tj
+ET
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 335.17 Tm
+(propiedades\)) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+144.26 303.97 153.38 66.00 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 149.76 357.57 Tm
+(id, nombre, imagen, ubicacion,) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 149.76 346.37 Tm
+(oficina \(AREQUIPA, LIMA,) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 149.76 335.17 Tm
+(MOQUEGUA, PUNO\), precio, moneda) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 149.76 323.97 Tm
+(\(PEN | USD\), enlace_remax,) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 149.76 312.77 Tm
+(activo, destacada) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+297.64 303.97 255.64 66.00 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 303.14 357.57 Tm
+(Almacena los inmuebles del catálogo. Tiene un CHECK en) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 303.14 346.37 Tm
+(BD que exige que si se registra un precio, la moneda) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 303.14 335.17 Tm
+(sea obligatoria \(PEN o USD\). Calcula dinámicamente) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 303.14 323.97 Tm
+(simbolo_moneda \("S/" o "$"\), precio_formateado,) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 303.14 312.77 Tm
+(url_imagen y el esquema SEO JSON-LD ItemList.) Tj
+ET
+q
+1.000 1.000 1.000 rg
+42.00 237.97 511.28 66.00 re f
+Q
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 237.97 102.26 66.00 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 291.57 Tm
+(Oficina) Tj
+ET
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 280.37 Tm
+(\(tabla: oficinas\)) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+144.26 237.97 153.38 66.00 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 149.76 291.57 Tm
+(id, codigo \(único\), slug) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 149.76 280.37 Tm
+(\(único\), nombre, direccion,) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 149.76 269.17 Tm
+(telefono, whatsapp, correo,) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 149.76 257.97 Tm
+(horario, enlace_google_maps,) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 149.76 246.77 Tm
+(imagen) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+297.64 237.97 255.64 66.00 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 303.14 291.57 Tm
+(Representa únicamente a las 4 sedes oficiales del) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 303.14 280.37 Tm
+(sistema: AREQUIPA \(arequipa\), LIMA \(lima\), MOQUEGUA) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 303.14 269.17 Tm
+(\(moquegua\) y PUNO \(puno\). En su método booted\(\) lanza) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 303.14 257.97 Tm
+(DomainException si alguien intenta crear una 5.ª) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 303.14 246.77 Tm
+(oficina, cambiar el código/slug o eliminar una sede.) Tj
+ET
+q
+0.960 0.975 0.995 rg
+42.00 171.97 511.28 66.00 re f
+Q
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 171.97 102.26 66.00 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 225.57 Tm
+(Agente) Tj
+ET
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 214.37 Tm
+(\(tabla: agentes\)) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+144.26 171.97 153.38 66.00 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 149.76 225.57 Tm
+(id, nombres, apellidos,) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 149.76 214.37 Tm
+(fotografia, biografia, celular,) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 149.76 203.17 Tm
+(whatsapp, correo, activo) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+297.64 171.97 255.64 66.00 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 303.14 225.57 Tm
+(Almacena el Directorio Institucional de Agentes) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 303.14 214.37 Tm
+(Inmobiliarios mostrado en la página Empresa. Provee) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 303.14 203.17 Tm
+(atributos calculados: nombre_completo, url_fotografia,) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 303.14 191.97 Tm
+(celular_enlace \(tel:\), whatsapp_enlace) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 303.14 180.77 Tm
+(\(https://wa.me/51...\) y whatsapp_visible.) Tj
+ET
+q
+1.000 1.000 1.000 rg
+42.00 83.57 511.28 88.40 re f
+Q
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 83.57 102.26 88.40 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 159.57 Tm
+(RankingMensual) Tj
+ET
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 148.37 Tm
+(\(tabla:) Tj
+ET
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 137.17 Tm
+(rankings_mensuales\)) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+144.26 83.57 153.38 88.40 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 149.76 159.57 Tm
+(id, mes_desempeno,) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 149.76 148.37 Tm
+(anio_desempeno, mes_publicacion,) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 149.76 137.17 Tm
+(anio_publicacion, estado) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 149.76 125.97 Tm
+(\(BORRADOR, PUBLICADO, CERRADO,) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 149.76 114.77 Tm
+(VENCIDO\), fecha_publicacion,) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 149.76 103.57 Tm
+(fecha_cierre, creado_por,) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 149.76 92.37 Tm
+(actualizado_por) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+297.64 83.57 255.64 88.40 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 303.14 159.57 Tm
+(Cabecera mensual del Top 3 de Vendedores. Regla de oro) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 303.14 148.37 Tm
+(\(dentroDePlazoDeGestion\): solo puede crearse, editarse) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 303.14 137.17 Tm
+(o publicarse durante los días 1, 2 y 3 del mes de) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 303.14 125.97 Tm
+(publicación \(hora America/Lima\). Un ranking CERRADO o) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 303.14 114.77 Tm
+(VENCIDO es 100% inmutable por modelo y por Triggers) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 303.14 103.57 Tm
+(MySQL.) Tj
+ET
+q
+0.780 0.830 0.900 rg
+42.00 32.00 511.28 0.60 re f
+Q
+BT
+/F1 7.80 Tf
+0.400 0.450 0.550 rg
+1 0 0 1 42.00 21.00 Tm
+(Documento de Estudio - Arquitectura y Componentes de RE/MAX Zona Inmobiliaria) Tj
+ET
+BT
+/F2 8.00 Tf
+0.000 0.240 0.650 rg
+1 0 0 1 495.28 21.00 Tm
+(Página 3 de 11) Tj
+ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 11 0 R >>
+endobj
+13 0 obj
+<< /Length 14711 >>
+stream
+q
+0.750 0.800 0.880 rg
+42.00 807.89 511.28 0.80 re f
+Q
+BT
+/F2 7.50 Tf
+0.000 0.240 0.650 rg
+1 0 0 1 42.00 812.89 Tm
+(MANUAL DE ESTUDIO Y ARQUITECTURA - SISTEMA WEB RE/MAX ZONA INMOBILIARIA) Tj
+ET
+BT
+/F1 7.50 Tf
+0.400 0.450 0.550 rg
+1 0 0 1 458.28 812.89 Tm
+(Laravel 13 + Livewire 4) Tj
+ET
+q
+0.000 0.240 0.650 rg
+0.000 0.240 0.650 RG 0.70 w
+42.00 767.89 511.28 20.00 re B
+Q
+BT
+/F2 8.60 Tf
+1.000 1.000 1.000 rg
+1 0 0 1 47.50 774.39 Tm
+(Modelo / Tabla BD) Tj
+ET
+BT
+/F2 8.60 Tf
+1.000 1.000 1.000 rg
+1 0 0 1 149.76 774.39 Tm
+(Columnas Clave) Tj
+ET
+BT
+/F2 8.60 Tf
+1.000 1.000 1.000 rg
+1 0 0 1 303.14 774.39 Tm
+(Función Exacta y Reglas Programadas en el Modelo) Tj
+ET
+q
+0.960 0.975 0.995 rg
+42.00 668.29 511.28 99.60 re f
+Q
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 668.29 102.26 99.60 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 755.49 Tm
+(PosicionRanking) Tj
+ET
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 744.29 Tm
+(\(tabla:) Tj
+ET
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 733.09 Tm
+(posiciones_ranking\)) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+144.26 668.29 153.38 99.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 149.76 755.49 Tm
+(id, ranking_mensual_id, puesto) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 149.76 744.29 Tm
+(\(1, 2 o 3\), codigo_interno) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 149.76 733.09 Tm
+(\(PART-...\), vendedor_id) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 149.76 721.89 Tm
+(\(nullable\), nombres_snapshot,) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 149.76 710.69 Tm
+(apellidos_snapshot,) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 149.76 699.49 Tm
+(celular_snapshot,) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 149.76 688.29 Tm
+(celular_normalizado,) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 149.76 677.09 Tm
+(foto_snapshot) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+297.64 668.29 255.64 99.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 303.14 755.49 Tm
+(Almacena los 3 ganadores del mes \(Puestos 1, 2 y 3\).) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 303.14 744.29 Tm
+(Guarda datos snapshot \(congelados\) y su propia) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 303.14 733.09 Tm
+(fotografía del periodo para que el historial jamás) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 303.14 721.89 Tm
+(cambie. Tiene índice único por \(ranking_mensual_id,) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 303.14 710.69 Tm
+(puesto\) y por \(ranking_mensual_id,) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 303.14 699.49 Tm
+(celular_normalizado\).) Tj
+ET
+q
+1.000 1.000 1.000 rg
+42.00 579.89 511.28 88.40 re f
+Q
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 579.89 102.26 88.40 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 655.89 Tm
+(ConfiguracionContacto) Tj
+ET
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 644.69 Tm
+(\(tabla:) Tj
+ET
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 633.49 Tm
+(configuracion_contacto\)) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+144.26 579.89 153.38 88.40 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 149.76 655.89 Tm
+(id \(fijo en 1\), nombre_empresa,) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 149.76 644.69 Tm
+(telefono_visible,) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 149.76 633.49 Tm
+(whatsapp_general,) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 149.76 622.29 Tm
+(correo_contacto, direccion,) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 149.76 611.09 Tm
+(horario_lunes_viernes,) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 149.76 599.89 Tm
+(horario_sabados,) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 149.76 588.69 Tm
+(whatsapp_postulacion) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+297.64 579.89 255.64 88.40 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 303.14 655.89 Tm
+(Tabla Singleton \(registro único con id = 1\). El método) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 303.14 644.69 Tm
+(obtenerUnica\(\) recupera o crea el registro inicial, y) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 303.14 633.49 Tm
+(booted\(\) impide crear un segundo registro o eliminarlo.) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 303.14 622.29 Tm
+(Alimenta el header, footer, botones de WhatsApp, página) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 303.14 611.09 Tm
+(Contacto y metadatos SEO.) Tj
+ET
+q
+0.960 0.975 0.995 rg
+42.00 525.09 511.28 54.80 re f
+Q
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 525.09 102.26 54.80 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 567.49 Tm
+(ConfiguracionPortada) Tj
+ET
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 556.29 Tm
+(\(tabla:) Tj
+ET
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 545.09 Tm
+(configuracion_portada\)) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+144.26 525.09 153.38 54.80 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 149.76 567.49 Tm
+(id \(fijo en 1\), imagen \(por) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 149.76 556.29 Tm
+(defecto images/fondoejemplo.jpg\)) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+297.64 525.09 255.64 54.80 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 303.14 567.49 Tm
+(Tabla Singleton \(id = 1\) que guarda la ruta de la) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 303.14 556.29 Tm
+(fotografía principal del banner Hero de la página de) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 303.14 545.09 Tm
+(Inicio. Si la imagen personalizada no existe en disco,) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 303.14 533.89 Tm
+(devuelve automáticamente images/fondoejemplo.jpg.) Tj
+ET
+q
+1.000 1.000 1.000 rg
+42.00 459.09 511.28 66.00 re f
+Q
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 459.09 102.26 66.00 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 512.69 Tm
+(Vendedor) Tj
+ET
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 501.49 Tm
+(\(tabla: vendedores\)) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+144.26 459.09 153.38 66.00 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 149.76 512.69 Tm
+(id, nombres, apellidos, celular,) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 149.76 501.49 Tm
+(foto, activo) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+297.64 459.09 255.64 66.00 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 303.14 512.69 Tm
+(Padrón base de vendedores creado en las primeras) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 303.14 501.49 Tm
+(migraciones \(GestionVendedores.php\). Se mantiene en la) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 303.14 490.29 Tm
+(BD por integridad histórica con los primeros registros) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 303.14 479.09 Tm
+(y el DatabaseSeeder, mientras que el ranking actual) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 303.14 467.89 Tm
+(permite registro directo independiente.) Tj
+ET
+q
+0.000 0.240 0.650 rg
+42.00 421.09 511.28 22.00 re f
+Q
+q
+0.860 0.110 0.180 rg
+42.00 418.59 511.28 2.50 re f
+Q
+BT
+/F2 11.50 Tf
+1.000 1.000 1.000 rg
+1 0 0 1 52.00 428.09 Tm
+(5. Mapa Completo de Rutas \(routes/web.php y routes/settings.php\)) Tj
+ET
+BT
+/F1 9.40 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 42.00 399.69 Tm
+(El archivo routes/web.php es el mapa de carreteras de la aplicación. Define qué componente Livewire o) Tj
+ET
+BT
+/F1 9.40 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 42.00 386.72 Tm
+(controlador responde en cada URL y qué middleware de seguridad la protege:) Tj
+ET
+q
+0.000 0.240 0.650 rg
+0.000 0.240 0.650 RG 0.70 w
+42.00 358.15 511.28 20.00 re B
+Q
+BT
+/F2 8.60 Tf
+1.000 1.000 1.000 rg
+1 0 0 1 47.50 364.65 Tm
+(URL / Ruta) Tj
+ET
+BT
+/F2 8.60 Tf
+1.000 1.000 1.000 rg
+1 0 0 1 170.21 364.65 Tm
+(Nombre de Ruta) Tj
+ET
+BT
+/F2 8.60 Tf
+1.000 1.000 1.000 rg
+1 0 0 1 277.58 364.65 Tm
+(Permiso / Middleware) Tj
+ET
+BT
+/F2 8.60 Tf
+1.000 1.000 1.000 rg
+1 0 0 1 374.72 364.65 Tm
+(Componente que se ejecuta y qué hace) Tj
+ET
+q
+1.000 1.000 1.000 rg
+42.00 314.55 511.28 43.60 re f
+Q
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 314.55 122.71 43.60 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 345.75 Tm
+(GET /) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+164.71 314.55 107.37 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 170.21 345.75 Tm
+(inicio) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+272.08 314.55 97.14 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 277.58 345.75 Tm
+(Público) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+369.22 314.55 184.06 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 345.75 Tm
+(PaginaInicio: Portada Hero, Top 3) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 334.55 Tm
+(Vendedores del mes y Propiedades) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 323.35 Tm
+(Destacadas.) Tj
+ET
+q
+0.960 0.975 0.995 rg
+42.00 270.95 511.28 43.60 re f
+Q
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 270.95 122.71 43.60 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 302.15 Tm
+(GET /empresa) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+164.71 270.95 107.37 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 170.21 302.15 Tm
+(empresa) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+272.08 270.95 97.14 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 277.58 302.15 Tm
+(Público) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+369.22 270.95 184.06 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 302.15 Tm
+(PaginaEmpresa: Quiénes somos,) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 290.95 Tm
+(Misión/Visión/Valores, Top 3 y) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 279.75 Tm
+(Directorio de Agentes.) Tj
+ET
+q
+1.000 1.000 1.000 rg
+42.00 227.35 511.28 43.60 re f
+Q
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 227.35 122.71 43.60 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 258.55 Tm
+(GET /propiedades) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+164.71 227.35 107.37 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 170.21 258.55 Tm
+(propiedades) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+272.08 227.35 97.14 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 277.58 258.55 Tm
+(Público) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+369.22 227.35 184.06 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 258.55 Tm
+(PaginaPropiedades: Catálogo general con) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 247.35 Tm
+(buscador en vivo por texto, ubicación y) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 236.15 Tm
+(moneda.) Tj
+ET
+q
+0.960 0.975 0.995 rg
+42.00 183.75 511.28 43.60 re f
+Q
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 183.75 122.71 43.60 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 214.95 Tm
+(GET /oficinas) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+164.71 183.75 107.37 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 170.21 214.95 Tm
+(oficinas) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+272.08 183.75 97.14 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 277.58 214.95 Tm
+(Público) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+369.22 183.75 184.06 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 214.95 Tm
+(PaginaOficinas: Muestra las 4 sedes) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 203.75 Tm
+(oficiales \(Arequipa, Lima, Moquegua y) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 192.55 Tm
+(Puno\).) Tj
+ET
+q
+1.000 1.000 1.000 rg
+42.00 140.15 511.28 43.60 re f
+Q
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 140.15 122.71 43.60 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 171.35 Tm
+(GET /oficinas/{oficina}) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+164.71 140.15 107.37 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 170.21 171.35 Tm
+(oficinas.propiedades) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+272.08 140.15 97.14 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 277.58 171.35 Tm
+(Público) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+369.22 140.15 184.06 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 171.35 Tm
+(PaginaPropiedadesOficina: Datos de la) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 160.15 Tm
+(sede y catálogo filtrado solo para esa) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 148.95 Tm
+(oficina.) Tj
+ET
+q
+0.960 0.975 0.995 rg
+42.00 96.55 511.28 43.60 re f
+Q
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 96.55 122.71 43.60 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 127.75 Tm
+(GET /contacto) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+164.71 96.55 107.37 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 170.21 127.75 Tm
+(contacto) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+272.08 96.55 97.14 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 277.58 127.75 Tm
+(Público) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+369.22 96.55 184.06 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 127.75 Tm
+(PaginaContacto: Teléfonos, WhatsApp) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 116.55 Tm
+(general, correo, horarios y) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 105.35 Tm
+(postulación.) Tj
+ET
+q
+1.000 1.000 1.000 rg
+42.00 52.95 511.28 43.60 re f
+Q
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 52.95 122.71 43.60 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 84.15 Tm
+(GET /salud) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+164.71 52.95 107.37 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 170.21 84.15 Tm
+(sistema.salud) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+272.08 52.95 97.14 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 277.58 84.15 Tm
+(Público \(JSON\)) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+369.22 52.95 184.06 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 84.15 Tm
+(EstadoSistemaController: Verifica) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 72.95 Tm
+(estado de aplicación, BD y escritura en) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 61.75 Tm
+(disco.) Tj
+ET
+q
+0.780 0.830 0.900 rg
+42.00 32.00 511.28 0.60 re f
+Q
+BT
+/F1 7.80 Tf
+0.400 0.450 0.550 rg
+1 0 0 1 42.00 21.00 Tm
+(Documento de Estudio - Arquitectura y Componentes de RE/MAX Zona Inmobiliaria) Tj
+ET
+BT
+/F2 8.00 Tf
+0.000 0.240 0.650 rg
+1 0 0 1 495.28 21.00 Tm
+(Página 4 de 11) Tj
+ET
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 13 0 R >>
+endobj
+15 0 obj
+<< /Length 15612 >>
+stream
+q
+0.750 0.800 0.880 rg
+42.00 807.89 511.28 0.80 re f
+Q
+BT
+/F2 7.50 Tf
+0.000 0.240 0.650 rg
+1 0 0 1 42.00 812.89 Tm
+(MANUAL DE ESTUDIO Y ARQUITECTURA - SISTEMA WEB RE/MAX ZONA INMOBILIARIA) Tj
+ET
+BT
+/F1 7.50 Tf
+0.400 0.450 0.550 rg
+1 0 0 1 458.28 812.89 Tm
+(Laravel 13 + Livewire 4) Tj
+ET
+q
+0.000 0.240 0.650 rg
+0.000 0.240 0.650 RG 0.70 w
+42.00 767.89 511.28 20.00 re B
+Q
+BT
+/F2 8.60 Tf
+1.000 1.000 1.000 rg
+1 0 0 1 47.50 774.39 Tm
+(URL / Ruta) Tj
+ET
+BT
+/F2 8.60 Tf
+1.000 1.000 1.000 rg
+1 0 0 1 170.21 774.39 Tm
+(Nombre de Ruta) Tj
+ET
+BT
+/F2 8.60 Tf
+1.000 1.000 1.000 rg
+1 0 0 1 277.58 774.39 Tm
+(Permiso / Middleware) Tj
+ET
+BT
+/F2 8.60 Tf
+1.000 1.000 1.000 rg
+1 0 0 1 374.72 774.39 Tm
+(Componente que se ejecuta y qué hace) Tj
+ET
+q
+0.960 0.975 0.995 rg
+42.00 724.29 511.28 43.60 re f
+Q
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 724.29 122.71 43.60 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 755.49 Tm
+(GET /sitemap.xml) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+164.71 724.29 107.37 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 170.21 755.49 Tm
+(sitemap) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+272.08 724.29 97.14 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 277.58 755.49 Tm
+(Público \(XML\)) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+369.22 724.29 184.06 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 755.49 Tm
+(Genera dinámicamente el mapa XML con) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 744.29 Tm
+(las rutas principales y las 4 oficinas) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 733.09 Tm
+(para Google.) Tj
+ET
+q
+1.000 1.000 1.000 rg
+42.00 680.69 511.28 43.60 re f
+Q
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 680.69 122.71 43.60 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 711.89 Tm
+(GET /admin/login) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+164.71 680.69 107.37 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 170.21 711.89 Tm
+(login) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+272.08 680.69 97.14 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 277.58 711.89 Tm
+(guest \(Invitados\)) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+369.22 680.69 184.06 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 711.89 Tm
+(IniciarSesion: Login administrativo con) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 700.69 Tm
+(límite de 5 intentos y verificación) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 689.49 Tm
+(2FA.) Tj
+ET
+q
+0.960 0.975 0.995 rg
+42.00 637.09 511.28 43.60 re f
+Q
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 637.09 122.71 43.60 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 668.29 Tm
+(POST /admin/logout) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+164.71 637.09 107.37 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 170.21 668.29 Tm
+(logout) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+272.08 637.09 97.14 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 277.58 668.29 Tm
+(auth) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+369.22 637.09 184.06 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 668.29 Tm
+(Cierra la sesión, invalida la sesión) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 657.09 Tm
+(actual, regenera token CSRF y redirige) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 645.89 Tm
+(al login.) Tj
+ET
+q
+1.000 1.000 1.000 rg
+42.00 593.49 511.28 43.60 re f
+Q
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 593.49 122.71 43.60 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 624.69 Tm
+(GET /admin/propiedades) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+164.71 593.49 107.37 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 170.21 624.69 Tm
+(admin.propiedades) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+272.08 593.49 97.14 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 277.58 624.69 Tm
+(auth + ADMIN o) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 277.58 613.49 Tm
+(MARKETING) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+369.22 593.49 184.06 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 624.69 Tm
+(GestionPropiedades: Crear, editar,) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 613.49 Tm
+(eliminar propiedades y marcar estrella) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 602.29 Tm
+(Destacada.) Tj
+ET
+q
+0.960 0.975 0.995 rg
+42.00 549.89 511.28 43.60 re f
+Q
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 549.89 122.71 43.60 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 581.09 Tm
+(GET /admin/agentes) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+164.71 549.89 107.37 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 170.21 581.09 Tm
+(admin.agentes) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+272.08 549.89 97.14 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 277.58 581.09 Tm
+(auth + ADMIN o) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 277.58 569.89 Tm
+(MARKETING) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+369.22 549.89 184.06 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 581.09 Tm
+(GestionAgentes: Crear, editar,) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 569.89 Tm
+(activar/ocultar o eliminar agentes del) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 558.69 Tm
+(directorio.) Tj
+ET
+q
+1.000 1.000 1.000 rg
+42.00 506.29 511.28 43.60 re f
+Q
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 506.29 122.71 43.60 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 537.49 Tm
+(GET) Tj
+ET
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 526.29 Tm
+(/admin/ranking-actual) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+164.71 506.29 107.37 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 170.21 537.49 Tm
+(admin.ranking.actual) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+272.08 506.29 97.14 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 277.58 537.49 Tm
+(auth + ADMIN o) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 277.58 526.29 Tm
+(MARKETING) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+369.22 506.29 184.06 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 537.49 Tm
+(GestionRankingActual: Registrar los) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 526.29 Tm
+(puestos 1, 2 y 3 y publicar el ranking) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 515.09 Tm
+(\(días 1 al 3\).) Tj
+ET
+q
+0.960 0.975 0.995 rg
+42.00 462.69 511.28 43.60 re f
+Q
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 462.69 122.71 43.60 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 493.89 Tm
+(GET /admin/portada) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+164.71 462.69 107.37 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 170.21 493.89 Tm
+(admin.portada) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+272.08 462.69 97.14 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 277.58 493.89 Tm
+(auth + Solo ADMIN) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+369.22 462.69 184.06 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 493.89 Tm
+(GestionPortada: Cambiar la fotografía) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 482.69 Tm
+(principal del Hero de la página de) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 471.49 Tm
+(Inicio.) Tj
+ET
+q
+1.000 1.000 1.000 rg
+42.00 419.09 511.28 43.60 re f
+Q
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 419.09 122.71 43.60 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 450.29 Tm
+(GET /admin/oficinas) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+164.71 419.09 107.37 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 170.21 450.29 Tm
+(admin.oficinas) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+272.08 419.09 97.14 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 277.58 450.29 Tm
+(auth + Solo ADMIN) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+369.22 419.09 184.06 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 450.29 Tm
+(GestionOficinas: Editar dirección,) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 439.09 Tm
+(teléfonos, horario, Google Maps y foto) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 427.89 Tm
+(de las 4 sedes.) Tj
+ET
+q
+0.960 0.975 0.995 rg
+42.00 375.49 511.28 43.60 re f
+Q
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 375.49 122.71 43.60 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 406.69 Tm
+(GET) Tj
+ET
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 395.49 Tm
+(/admin/historial-rankings) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+164.71 375.49 107.37 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 170.21 406.69 Tm
+(admin.ranking.historial) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+272.08 375.49 97.14 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 277.58 406.69 Tm
+(auth + Solo ADMIN) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+369.22 375.49 184.06 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 406.69 Tm
+(HistorialRankings: Consultar rankings) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 395.49 Tm
+(cerrados/publicados por año y mes de) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 384.29 Tm
+(desempeño.) Tj
+ET
+q
+1.000 1.000 1.000 rg
+42.00 331.89 511.28 43.60 re f
+Q
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 331.89 122.71 43.60 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 363.09 Tm
+(GET) Tj
+ET
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 351.89 Tm
+(/admin/configuracion-contacto) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+164.71 331.89 107.37 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 170.21 363.09 Tm
+(admin.contacto) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+272.08 331.89 97.14 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 277.58 363.09 Tm
+(auth + Solo ADMIN) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+369.22 331.89 184.06 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 363.09 Tm
+(GestionContacto: Editar teléfonos) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 351.89 Tm
+(globales, WhatsApp, correos, dirección) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 340.69 Tm
+(y horarios.) Tj
+ET
+q
+0.960 0.975 0.995 rg
+42.00 288.29 511.28 43.60 re f
+Q
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 288.29 122.71 43.60 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 319.49 Tm
+(GET /admin/usuarios) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+164.71 288.29 107.37 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 170.21 319.49 Tm
+(admin.usuarios) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+272.08 288.29 97.14 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 277.58 319.49 Tm
+(auth + Solo ADMIN) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+369.22 288.29 184.06 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 319.49 Tm
+(GestionUsuarios: Crear usuarios,) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 308.29 Tm
+(cambiar contraseñas, asignar roles y) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 297.09 Tm
+(activar/desactivar.) Tj
+ET
+q
+1.000 1.000 1.000 rg
+42.00 244.69 511.28 43.60 re f
+Q
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 244.69 122.71 43.60 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 275.89 Tm
+(GET /settings/profile) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+164.71 244.69 107.37 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 170.21 275.89 Tm
+(profile.edit) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+272.08 244.69 97.14 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 277.58 275.89 Tm
+(auth + ADMIN o) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 277.58 264.69 Tm
+(MARKETING) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+369.22 244.69 184.06 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 275.89 Tm
+(Profile: Editar nombre y correo propio) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 264.69 Tm
+(\(exige contraseña actual si cambia el) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 253.49 Tm
+(correo\).) Tj
+ET
+q
+0.960 0.975 0.995 rg
+42.00 212.29 511.28 32.40 re f
+Q
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 212.29 122.71 32.40 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 232.29 Tm
+(GET) Tj
+ET
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 221.09 Tm
+(/settings/appearance) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+164.71 212.29 107.37 32.40 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 170.21 232.29 Tm
+(appearance.edit) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+272.08 212.29 97.14 32.40 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 277.58 232.29 Tm
+(auth + ADMIN o) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 277.58 221.09 Tm
+(MARKETING) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+369.22 212.29 184.06 32.40 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 232.29 Tm
+(Appearance: Cambiar entre Modo Claro y) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 221.09 Tm
+(Modo Oscuro en tiempo real.) Tj
+ET
+q
+1.000 1.000 1.000 rg
+42.00 168.69 511.28 43.60 re f
+Q
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 168.69 122.71 43.60 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 199.89 Tm
+(GET /settings/security) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+164.71 168.69 107.37 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 170.21 199.89 Tm
+(security.edit) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+272.08 168.69 97.14 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 277.58 199.89 Tm
+(auth +) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 277.58 188.69 Tm
+(password.confirm) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+369.22 168.69 184.06 43.60 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 199.89 Tm
+(Security: Cambiar contraseña y) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 188.69 Tm
+(activar/confirmar/desactivar 2FA con) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 374.72 177.49 Tm
+(código QR.) Tj
+ET
+q
+0.000 0.240 0.650 rg
+42.00 130.69 511.28 22.00 re f
+Q
+q
+0.860 0.110 0.180 rg
+42.00 128.19 511.28 2.50 re f
+Q
+BT
+/F2 11.50 Tf
+1.000 1.000 1.000 rg
+1 0 0 1 52.00 137.69 Tm
+(6. Explicación Detallada del Sitio Web Público \(Componente por Componente\)) Tj
+ET
+q
+0.860 0.110 0.180 rg
+42.00 103.69 4.00 13.00 re f
+Q
+BT
+/F2 10.50 Tf
+0.000 0.240 0.650 rg
+1 0 0 1 51.00 105.69 Tm
+(6.1. El Layout Maestro Público \(resources/views/components/layouts/publico.blade.php\)) Tj
+ET
+BT
+/F1 9.40 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 42.00 87.29 Tm
+(Es la estructura HTML envolvente de todas las páginas para visitantes. Cumple cuatro funciones) Tj
+ET
+BT
+/F1 9.40 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 42.00 74.32 Tm
+(esenciales:) Tj
+ET
+q
+0.780 0.830 0.900 rg
+42.00 32.00 511.28 0.60 re f
+Q
+BT
+/F1 7.80 Tf
+0.400 0.450 0.550 rg
+1 0 0 1 42.00 21.00 Tm
+(Documento de Estudio - Arquitectura y Componentes de RE/MAX Zona Inmobiliaria) Tj
+ET
+BT
+/F2 8.00 Tf
+0.000 0.240 0.650 rg
+1 0 0 1 495.28 21.00 Tm
+(Página 5 de 11) Tj
+ET
+endstream
+endobj
+16 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 15 0 R >>
+endobj
+17 0 obj
+<< /Length 8860 >>
+stream
+q
+0.750 0.800 0.880 rg
+42.00 807.89 511.28 0.80 re f
+Q
+BT
+/F2 7.50 Tf
+0.000 0.240 0.650 rg
+1 0 0 1 42.00 812.89 Tm
+(MANUAL DE ESTUDIO Y ARQUITECTURA - SISTEMA WEB RE/MAX ZONA INMOBILIARIA) Tj
+ET
+BT
+/F1 7.50 Tf
+0.400 0.450 0.550 rg
+1 0 0 1 458.28 812.89 Tm
+(Laravel 13 + Livewire 4) Tj
+ET
+q
+0.860 0.110 0.180 rg
+46.00 780.89 4.00 4.00 re f
+Q
+BT
+/F2 9.20 Tf
+0.050 0.150 0.350 rg
+1 0 0 1 56.00 778.69 Tm
+(1. Motor SEO y Datos Estructurados JSON-LD:) Tj
+ET
+BT
+/F1 9.20 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 281.54 778.69 Tm
+(En el <head>, obtiene los datos reales de) Tj
+ET
+BT
+/F1 9.20 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 56.00 766.18 Tm
+(ConfiguracionContacto::obtenerUnica\(\) y genera dinámicamente las etiquetas <title>, <meta) Tj
+ET
+BT
+/F1 9.20 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 56.00 753.67 Tm
+(name="description">, <link rel="canonical">, etiquetas Open Graph \(og:title, og:description,) Tj
+ET
+BT
+/F1 9.20 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 56.00 741.15 Tm
+(og:image, og:url\) para vistas previas en redes sociales y WhatsApp, Twitter Cards y un bloque) Tj
+ET
+BT
+/F1 9.20 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 56.00 728.64 Tm
+(JSON-LD de tipo "RealEstateAgent" \(Schema.org\) con teléfono, correo y dirección postal.) Tj
+ET
+q
+0.860 0.110 0.180 rg
+46.00 715.83 4.00 4.00 re f
+Q
+BT
+/F2 9.20 Tf
+0.050 0.150 0.350 rg
+1 0 0 1 56.00 713.63 Tm
+(2. Accesibilidad Web \(WCAG 2.1 Nivel AA\):) Tj
+ET
+BT
+/F1 9.20 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 271.23 713.63 Tm
+(Incluye el enlace de salto rápido <a) Tj
+ET
+BT
+/F1 9.20 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 56.00 701.12 Tm
+(class="skip-link" href="#contenido">Saltar al contenido</a>, regiones semánticas \(<header>,) Tj
+ET
+BT
+/F1 9.20 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 56.00 688.61 Tm
+(<nav>, <main id="contenido">, <footer>\) y el atributo aria-current="page" en la pestaña activa) Tj
+ET
+BT
+/F1 9.20 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 56.00 676.09 Tm
+(del menú.) Tj
+ET
+q
+0.860 0.110 0.180 rg
+46.00 663.28 4.00 4.00 re f
+Q
+BT
+/F2 9.20 Tf
+0.050 0.150 0.350 rg
+1 0 0 1 56.00 661.08 Tm
+(3. Cabecera de Navegación \(Header\):) Tj
+ET
+BT
+/F1 9.20 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 240.32 661.08 Tm
+(Muestra el logotipo institucional con) Tj
+ET
+BT
+/F1 9.20 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 56.00 648.57 Tm
+(<x-imagen-optimizada> y el menú principal con las 5 secciones: Inicio, Empresa, Propiedades,) Tj
+ET
+BT
+/F1 9.20 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 56.00 636.06 Tm
+(Oficinas y Contacto.) Tj
+ET
+q
+0.860 0.110 0.180 rg
+46.00 623.25 4.00 4.00 re f
+Q
+BT
+/F2 9.20 Tf
+0.050 0.150 0.350 rg
+1 0 0 1 56.00 621.05 Tm
+(4. Pie de Página \(Footer\) y Botón Flotante de WhatsApp:) Tj
+ET
+BT
+/F1 9.20 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 343.36 621.05 Tm
+(Muestra en tres columnas el resumen de) Tj
+ET
+BT
+/F1 9.20 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 56.00 608.53 Tm
+(la empresa, los enlaces directos de teléfono \(tel:\), correo \(mailto:\) y WhatsApp, los horarios) Tj
+ET
+BT
+/F1 9.20 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 56.00 596.02 Tm
+(de lunes a sábado y un botón flotante permanente en la esquina inferior derecha que abre) Tj
+ET
+BT
+/F1 9.20 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 56.00 583.51 Tm
+(WhatsApp.) Tj
+ET
+q
+0.860 0.110 0.180 rg
+42.00 558.70 4.00 13.00 re f
+Q
+BT
+/F2 10.50 Tf
+0.000 0.240 0.650 rg
+1 0 0 1 51.00 560.70 Tm
+(6.2. El Componente <x-imagen-optimizada> \(resources/views/components/imagen-optimizada.blade.php\)) Tj
+ET
+BT
+/F1 9.40 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 42.00 542.30 Tm
+(Todas las imágenes del sitio público pasan por este componente Blade. Recibe la ruta interna del) Tj
+ET
+BT
+/F1 9.40 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 42.00 529.33 Tm
+(archivo y consulta a ServicioOptimizacionImagen::obtenerUrlWebp\($ruta\). Si existe la copia .webp) Tj
+ET
+BT
+/F1 9.40 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 42.00 516.35 Tm
+(optimizada, renderiza un elemento HTML5 <picture> con <source srcset="..." type="image/webp"> y deja la) Tj
+ET
+BT
+/F1 9.40 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 42.00 503.38 Tm
+(etiqueta <img> tradicional como respaldo para navegadores antiguos, añadiendo dimensiones explícitas) Tj
+ET
+BT
+/F1 9.40 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 42.00 490.41 Tm
+(\(width/height para evitar saltos visuales CLS\), decoding="async" y loading="lazy".) Tj
+ET
+q
+0.860 0.110 0.180 rg
+42.00 466.84 4.00 13.00 re f
+Q
+BT
+/F2 10.50 Tf
+0.000 0.240 0.650 rg
+1 0 0 1 51.00 468.84 Tm
+(6.3. Las 6 Páginas Públicas y su Lógica Interna) Tj
+ET
+q
+0.965 0.978 0.995 rg
+0.750 0.820 0.920 RG 0.80 w
+42.00 267.44 511.28 192.40 re B
+Q
+q
+0.000 0.240 0.650 rg
+42.00 267.44 4.50 192.40 re f
+Q
+BT
+/F2 9.80 Tf
+0.000 0.220 0.600 rg
+1 0 0 1 54.00 444.84 Tm
+(1. Página de Inicio - PaginaInicio.php y pagina-inicio.blade.php \(Ruta: /\)) Tj
+ET
+q
+0.750 0.820 0.920 rg
+54.00 440.84 489.28 0.50 re f
+Q
+q
+0.000 0.240 0.650 rg
+55.00 430.84 3.20 3.20 re f
+Q
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 428.84 Tm
+(Banner Hero de Portada: Obtiene la imagen de ConfiguracionPortada::obtenerUnica\(\) y la carga con) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 416.64 Tm
+(fetchpriority="high" \(sin lazy loading\) para que la portada aparezca instantáneamente.) Tj
+ET
+q
+0.000 0.240 0.650 rg
+55.00 403.44 3.20 3.20 re f
+Q
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 401.44 Tm
+(Bloque "Nuestros destacados" \(Ranking Mensual\): Consulta en modo 100% lectura si existe un) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 389.24 Tm
+(RankingMensual para el año y mes de publicación actual \(hora America/Lima\) en estado PUBLICADO o) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 377.04 Tm
+(CERRADO. Si tiene sus 3 puestos, dibuja las tarjetas de 1.er Puesto, 2.º Puesto y 3.er Puesto con su) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 364.84 Tm
+(foto snapshot, nombre y enlace directo a su WhatsApp. Si aún no se publica el ranking del mes,) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 352.64 Tm
+(muestra una caja informativa \("Ranking mensual en actualización..."\).) Tj
+ET
+q
+0.000 0.240 0.650 rg
+55.00 339.44 3.20 3.20 re f
+Q
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 337.44 Tm
+(Bloque "Propiedades destacadas": Consulta Propiedad::where\("activo", true\)->where\("destacada",) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 325.24 Tm
+(true\)->get\(\). Muestra cada propiedad con foto WebP, nombre, ubicación, precio formateado \(si tiene) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 313.04 Tm
+(precio\) y botón "Más información ->" hacia la ficha oficial en RE/MAX Perú.) Tj
+ET
+q
+0.000 0.240 0.650 rg
+55.00 299.84 3.20 3.20 re f
+Q
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 297.84 Tm
+(Bloque CTA "Trabaja con nosotros": Botón directo que abre WhatsApp hacia el número configurado en) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 285.64 Tm
+(whatsapp_postulacion.) Tj
+ET
+q
+0.965 0.978 0.995 rg
+0.750 0.820 0.920 RG 0.80 w
+42.00 115.84 511.28 143.60 re B
+Q
+q
+0.000 0.240 0.650 rg
+42.00 115.84 4.50 143.60 re f
+Q
+BT
+/F2 9.80 Tf
+0.000 0.220 0.600 rg
+1 0 0 1 54.00 244.44 Tm
+(2. Página Empresa - PaginaEmpresa.php y pagina-empresa.blade.php \(Ruta: /empresa\)) Tj
+ET
+q
+0.750 0.820 0.920 rg
+54.00 240.44 489.28 0.50 re f
+Q
+q
+0.000 0.240 0.650 rg
+55.00 230.44 3.20 3.20 re f
+Q
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 228.44 Tm
+(Sección "Quiénes somos": Muestra la historia y propósito de RE/MAX Zona en el sur del país, su) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 216.24 Tm
+(cobertura regional y la fotografía institucional de premios \(images/Premios.jpeg\).) Tj
+ET
+q
+0.000 0.240 0.650 rg
+55.00 203.04 3.20 3.20 re f
+Q
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 201.04 Tm
+(Sección "Identidad corporativa": Presenta en tres tarjetas la Misión, la Visión y los Valores) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 188.84 Tm
+(institucionales \(Transparencia, Confianza, Ética profesional, Compromiso con el cliente\).) Tj
+ET
+q
+0.000 0.240 0.650 rg
+55.00 175.64 3.20 3.20 re f
+Q
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 173.64 Tm
+(Sección "Nuestros destacados": Muestra también el Top 3 del Ranking Mensual vigente.) Tj
+ET
+q
+0.000 0.240 0.650 rg
+55.00 160.44 3.20 3.20 re f
+Q
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 158.44 Tm
+(Sección "Directorio institucional - Nuestros agentes inmobiliarios": Consulta Agente::where\("activo",) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 146.24 Tm
+(true\)->orderBy\("nombres"\)->orderBy\("apellidos"\)->get\(\). Por cada agente activo muestra su foto WebP,) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 134.04 Tm
+(nombre completo, biografía profesional y botones interactivos de Celular, WhatsApp y Correo.) Tj
+ET
+q
+0.780 0.830 0.900 rg
+42.00 32.00 511.28 0.60 re f
+Q
+BT
+/F1 7.80 Tf
+0.400 0.450 0.550 rg
+1 0 0 1 42.00 21.00 Tm
+(Documento de Estudio - Arquitectura y Componentes de RE/MAX Zona Inmobiliaria) Tj
+ET
+BT
+/F2 8.00 Tf
+0.000 0.240 0.650 rg
+1 0 0 1 495.28 21.00 Tm
+(Página 6 de 11) Tj
+ET
+endstream
+endobj
+18 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 17 0 R >>
+endobj
+19 0 obj
+<< /Length 8305 >>
+stream
+q
+0.750 0.800 0.880 rg
+42.00 807.89 511.28 0.80 re f
+Q
+BT
+/F2 7.50 Tf
+0.000 0.240 0.650 rg
+1 0 0 1 42.00 812.89 Tm
+(MANUAL DE ESTUDIO Y ARQUITECTURA - SISTEMA WEB RE/MAX ZONA INMOBILIARIA) Tj
+ET
+BT
+/F1 7.50 Tf
+0.400 0.450 0.550 rg
+1 0 0 1 458.28 812.89 Tm
+(Laravel 13 + Livewire 4) Tj
+ET
+q
+0.965 0.978 0.995 rg
+0.750 0.820 0.920 RG 0.80 w
+42.00 619.89 511.28 168.00 re B
+Q
+q
+0.000 0.240 0.650 rg
+42.00 619.89 4.50 168.00 re f
+Q
+BT
+/F2 9.80 Tf
+0.000 0.220 0.600 rg
+1 0 0 1 54.00 772.89 Tm
+(3. Página Propiedades \(Catálogo General\) - PaginaPropiedades.php \(Ruta: /propiedades\)) Tj
+ET
+q
+0.750 0.820 0.920 rg
+54.00 768.89 489.28 0.50 re f
+Q
+q
+0.000 0.240 0.650 rg
+55.00 758.89 3.20 3.20 re f
+Q
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 756.89 Tm
+(Propiedades Reactivas en la URL \(#[Url]\): Define tres variables públicas sincronizadas con la barra) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 744.69 Tm
+(de direcciones del navegador: $busqueda \(texto libre\), $ubicacion \(selector desplegable\) y $moneda) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 732.49 Tm
+(\(PEN o USD\).) Tj
+ET
+q
+0.000 0.240 0.650 rg
+55.00 719.29 3.20 3.20 re f
+Q
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 717.29 Tm
+(Filtrado Dinámico en Tiempo Real: Al escribir en el buscador \(con debounce de 300ms\) o elegir una) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 705.09 Tm
+(ubicación/moneda, el método render\(\) filtra Propiedad::where\("activo", true\) buscando coincidencias) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 692.89 Tm
+(LIKE en nombre o ubicación. El desplegable de ubicaciones se construye automáticamente con las) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 680.69 Tm
+(ubicaciones únicas de las propiedades activas.) Tj
+ET
+q
+0.000 0.240 0.650 rg
+55.00 667.49 3.20 3.20 re f
+Q
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 665.49 Tm
+(Método limpiarFiltros\(\): Restablece los tres filtros con un solo clic.) Tj
+ET
+q
+0.000 0.240 0.650 rg
+55.00 652.29 3.20 3.20 re f
+Q
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 650.29 Tm
+(Esquema SEO de Catálogo: Llama a Propiedad::construirDatosEstructuradosCatalogo\(\) para inyectar un) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 638.09 Tm
+(JSON-LD ItemList con todas las propiedades mostradas.) Tj
+ET
+q
+0.965 0.978 0.995 rg
+0.750 0.820 0.920 RG 0.80 w
+42.00 471.29 511.28 140.60 re B
+Q
+q
+0.000 0.240 0.650 rg
+42.00 471.29 4.50 140.60 re f
+Q
+BT
+/F2 9.80 Tf
+0.000 0.220 0.600 rg
+1 0 0 1 54.00 596.89 Tm
+(4. Página Oficinas - PaginaOficinas.php y pagina-oficinas.blade.php \(Ruta: /oficinas\)) Tj
+ET
+q
+0.750 0.820 0.920 rg
+54.00 592.89 489.28 0.50 re f
+Q
+q
+0.000 0.240 0.650 rg
+55.00 582.89 3.20 3.20 re f
+Q
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 580.89 Tm
+(Listado Oficial de las 4 Sedes: Llama a Oficina::obtenerTodas\(\), que ordena las sedes mediante un) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 568.69 Tm
+(CASE SQL en el orden exacto: 1. Arequipa, 2. Lima, 3. Moquegua, 4. Puno.) Tj
+ET
+q
+0.000 0.240 0.650 rg
+55.00 555.49 3.20 3.20 re f
+Q
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 553.49 Tm
+(Tarjeta Inteligente por Sede: Si la sede tiene foto, la muestra optimizada; si no tiene foto aún,) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 541.29 Tm
+(muestra un banner institucional con el nombre de la sede. Si el administrador cargó datos de contacto) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 529.09 Tm
+(de esa sede \(dirección, teléfono, WhatsApp, correo, horario o link de Google Maps\), los lista) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 516.89 Tm
+(detalladamente.) Tj
+ET
+q
+0.000 0.240 0.650 rg
+55.00 503.69 3.20 3.20 re f
+Q
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 501.69 Tm
+(Enlace al Catálogo de la Sede: Cada tarjeta incluye el botón "Ver propiedades" que lleva a) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 489.49 Tm
+(/oficinas/{slug} \(ej. /oficinas/puno o /oficinas/arequipa\).) Tj
+ET
+q
+0.965 0.978 0.995 rg
+0.750 0.820 0.920 RG 0.80 w
+42.00 322.69 511.28 140.60 re B
+Q
+q
+0.000 0.240 0.650 rg
+42.00 322.69 4.50 140.60 re f
+Q
+BT
+/F2 9.80 Tf
+0.000 0.220 0.600 rg
+1 0 0 1 54.00 448.29 Tm
+(5. Página Propiedades por Oficina - PaginaPropiedadesOficina.php \(Ruta: /oficinas/{oficina}\)) Tj
+ET
+q
+0.750 0.820 0.920 rg
+54.00 444.29 489.28 0.50 re f
+Q
+q
+0.000 0.240 0.650 rg
+55.00 434.29 3.20 3.20 re f
+Q
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 432.29 Tm
+(Validación de Seguridad en mount\($oficina\): Normaliza el slug recibido en la URL y verifica si existe) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 420.09 Tm
+(en Propiedad::SLUGS_OFICINAS \(arequipa, lima, moquegua, puno\). Si no existe, lanza abort\(404\).) Tj
+ET
+q
+0.000 0.240 0.650 rg
+55.00 406.89 3.20 3.20 re f
+Q
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 404.89 Tm
+(Encabezado y Ficha de Contacto de la Sede: Recupera el modelo Oficina::porSlug\($slugOficina\) y) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 392.69 Tm
+(muestra una barra resumen con la dirección, teléfono, WhatsApp, correo, horario y Google Maps) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 380.49 Tm
+(exclusivos de esa oficina.) Tj
+ET
+q
+0.000 0.240 0.650 rg
+55.00 367.29 3.20 3.20 re f
+Q
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 365.29 Tm
+(Catálogo y Filtros Exclusivos de la Sede: Ejecuta la misma barra de búsqueda en vivo \(texto,) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 353.09 Tm
+(ubicación y moneda\), pero restringiendo la consulta base a where\("activo", true\)->where\("oficina",) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 340.89 Tm
+($this->codigoOficina\).) Tj
+ET
+q
+0.965 0.978 0.995 rg
+0.750 0.820 0.920 RG 0.80 w
+42.00 241.09 511.28 73.60 re B
+Q
+q
+0.000 0.240 0.650 rg
+42.00 241.09 4.50 73.60 re f
+Q
+BT
+/F2 9.80 Tf
+0.000 0.220 0.600 rg
+1 0 0 1 54.00 299.69 Tm
+(6. Página Contacto - PaginaContacto.php y pagina-contacto.blade.php \(Ruta: /contacto\)) Tj
+ET
+q
+0.750 0.820 0.920 rg
+54.00 295.69 489.28 0.50 re f
+Q
+q
+0.000 0.240 0.650 rg
+55.00 285.69 3.20 3.20 re f
+Q
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 283.69 Tm
+(Presenta en cuatro tarjetas limpias los canales oficiales de ConfiguracionContacto: 1\) Teléfono y) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 271.49 Tm
+(WhatsApp general, 2\) Correo electrónico institucional, 3\) Dirección y cobertura geográfica, y 4\)) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 259.29 Tm
+(Horario de atención \(Lunes a viernes y Sábados\), finalizando con la sección "Trabaja con nosotros".) Tj
+ET
+q
+0.000 0.240 0.650 rg
+42.00 205.09 511.28 22.00 re f
+Q
+q
+0.860 0.110 0.180 rg
+42.00 202.59 511.28 2.50 re f
+Q
+BT
+/F2 11.50 Tf
+1.000 1.000 1.000 rg
+1 0 0 1 52.00 212.09 Tm
+(7. Sistema de Autenticación, Seguridad 2FA y Permisos por Rol) Tj
+ET
+q
+0.860 0.110 0.180 rg
+42.00 178.09 4.00 13.00 re f
+Q
+BT
+/F2 10.50 Tf
+0.000 0.240 0.650 rg
+1 0 0 1 51.00 180.09 Tm
+(7.1. Inicio de Sesión y Desafío 2FA \(app/Livewire/Autenticacion/IniciarSesion.php\)) Tj
+ET
+BT
+/F1 9.40 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 42.00 161.69 Tm
+(La pantalla /admin/login protege la entrada al panel administrativo mediante un proceso riguroso paso a) Tj
+ET
+BT
+/F1 9.40 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 42.00 148.72 Tm
+(paso:) Tj
+ET
+q
+0.860 0.110 0.180 rg
+46.00 133.15 4.00 4.00 re f
+Q
+BT
+/F2 9.20 Tf
+0.050 0.150 0.350 rg
+1 0 0 1 56.00 130.95 Tm
+(Paso 1 - Protección Anti-Fuerza Bruta \(RateLimiter\):) Tj
+ET
+BT
+/F1 9.20 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 327.90 130.95 Tm
+(Calcula una huella única combinando el) Tj
+ET
+BT
+/F1 9.20 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 56.00 118.43 Tm
+(correo electrónico en minúsculas y la dirección IP del cliente \(correo|ip\). Si se registran 5) Tj
+ET
+BT
+/F1 9.20 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 56.00 105.92 Tm
+(intentos fallidos, bloquea el acceso durante 60 segundos e informa cuántos segundos faltan) Tj
+ET
+BT
+/F1 9.20 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 56.00 93.41 Tm
+(para volver a intentar.) Tj
+ET
+q
+0.780 0.830 0.900 rg
+42.00 32.00 511.28 0.60 re f
+Q
+BT
+/F1 7.80 Tf
+0.400 0.450 0.550 rg
+1 0 0 1 42.00 21.00 Tm
+(Documento de Estudio - Arquitectura y Componentes de RE/MAX Zona Inmobiliaria) Tj
+ET
+BT
+/F2 8.00 Tf
+0.000 0.240 0.650 rg
+1 0 0 1 495.28 21.00 Tm
+(Página 7 de 11) Tj
+ET
+endstream
+endobj
+20 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 19 0 R >>
+endobj
+21 0 obj
+<< /Length 11629 >>
+stream
+q
+0.750 0.800 0.880 rg
+42.00 807.89 511.28 0.80 re f
+Q
+BT
+/F2 7.50 Tf
+0.000 0.240 0.650 rg
+1 0 0 1 42.00 812.89 Tm
+(MANUAL DE ESTUDIO Y ARQUITECTURA - SISTEMA WEB RE/MAX ZONA INMOBILIARIA) Tj
+ET
+BT
+/F1 7.50 Tf
+0.400 0.450 0.550 rg
+1 0 0 1 458.28 812.89 Tm
+(Laravel 13 + Livewire 4) Tj
+ET
+q
+0.860 0.110 0.180 rg
+46.00 780.89 4.00 4.00 re f
+Q
+BT
+/F2 9.20 Tf
+0.050 0.150 0.350 rg
+1 0 0 1 56.00 778.69 Tm
+(Paso 2 - Verificación de Credenciales y Estado Activo:) Tj
+ET
+BT
+/F1 9.20 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 338.21 778.69 Tm
+(Busca al usuario por correo, verifica) Tj
+ET
+BT
+/F1 9.20 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 56.00 766.18 Tm
+(la contraseña con Hash::check\(\) y comprueba que $usuario->activo sea true. Si la cuenta está) Tj
+ET
+BT
+/F1 9.20 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 56.00 753.67 Tm
+(desactivada, rechaza el ingreso con el mensaje: "Esta cuenta se encuentra desactivada.) Tj
+ET
+BT
+/F1 9.20 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 56.00 741.15 Tm
+(Contacta al administrador.") Tj
+ET
+q
+0.860 0.110 0.180 rg
+46.00 728.34 4.00 4.00 re f
+Q
+BT
+/F2 9.20 Tf
+0.050 0.150 0.350 rg
+1 0 0 1 56.00 726.14 Tm
+(Paso 3 - Desafío de Dos Factores \(2FA\) si está activo:) Tj
+ET
+BT
+/F1 9.20 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 338.21 726.14 Tm
+(Si el usuario activó 2FA en su perfil) Tj
+ET
+BT
+/F1 9.20 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 56.00 713.63 Tm
+(\($usuario->hasEnabledTwoFactorAuthentication\(\)\), no inicia sesión todavía: activa) Tj
+ET
+BT
+/F1 9.20 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 56.00 701.12 Tm
+($requiereDesafio2FA = true y solicita el código TOTP de 6 dígitos de su aplicación) Tj
+ET
+BT
+/F1 9.20 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 56.00 688.61 Tm
+(autenticadora \(Google Authenticator / Microsoft Authenticator\) o uno de sus códigos de) Tj
+ET
+BT
+/F1 9.20 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 56.00 676.09 Tm
+(recuperación de emergencia \(también protegido con su propio RateLimiter de 5 intentos\).) Tj
+ET
+q
+0.860 0.110 0.180 rg
+46.00 663.28 4.00 4.00 re f
+Q
+BT
+/F2 9.20 Tf
+0.050 0.150 0.350 rg
+1 0 0 1 56.00 661.08 Tm
+(Paso 4 - Regeneración de Sesión y Tema Visual:) Tj
+ET
+BT
+/F1 9.20 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 296.99 661.08 Tm
+(Una vez superada la validación, ejecuta) Tj
+ET
+BT
+/F1 9.20 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 56.00 648.57 Tm
+(Auth::login\(\), regenera el ID de sesión \(session\(\)->regenerate\(\)\) para evitar ataques de) Tj
+ET
+BT
+/F1 9.20 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 56.00 636.06 Tm
+(fijación de sesión, carga en sesión el tema preferido del usuario \(claro u oscuro\) y redirige) Tj
+ET
+BT
+/F1 9.20 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 56.00 623.55 Tm
+(a /admin/propiedades.) Tj
+ET
+q
+0.860 0.110 0.180 rg
+42.00 598.73 4.00 13.00 re f
+Q
+BT
+/F2 10.50 Tf
+0.000 0.240 0.650 rg
+1 0 0 1 51.00 600.73 Tm
+(7.2. Middleware de Autorización por Rol \(app/Http/Middleware/VerificarRol.php\)) Tj
+ET
+BT
+/F1 9.40 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 42.00 582.33 Tm
+(Registrado bajo el alias "rol" en bootstrap/app.php. Cada vez que un usuario navega por /admin/*, este) Tj
+ET
+BT
+/F1 9.40 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 42.00 569.36 Tm
+(middleware verifica: 1\) Que haya sesión iniciada, 2\) Que el usuario siga con activo = true en la base) Tj
+ET
+BT
+/F1 9.40 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 42.00 556.39 Tm
+(de datos \(si fue desactivado mientras navegaba, le cierra la sesión automáticamente\), y 3\) Que su rol) Tj
+ET
+BT
+/F1 9.40 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 42.00 543.42 Tm
+(coincida con los permisos de la ruta. La matriz de permisos es la siguiente:) Tj
+ET
+q
+0.000 0.240 0.650 rg
+0.000 0.240 0.650 RG 0.70 w
+42.00 514.85 511.28 20.00 re B
+Q
+BT
+/F2 8.60 Tf
+1.000 1.000 1.000 rg
+1 0 0 1 47.50 521.35 Tm
+(Módulo Administrativo) Tj
+ET
+BT
+/F2 8.60 Tf
+1.000 1.000 1.000 rg
+1 0 0 1 221.34 521.35 Tm
+(Ruta) Tj
+ET
+BT
+/F2 8.60 Tf
+1.000 1.000 1.000 rg
+1 0 0 1 364.49 521.35 Tm
+(Rol ADMINISTRADOR) Tj
+ET
+BT
+/F2 8.60 Tf
+1.000 1.000 1.000 rg
+1 0 0 1 461.64 521.35 Tm
+(Rol MARKETING) Tj
+ET
+q
+1.000 1.000 1.000 rg
+42.00 493.65 511.28 21.20 re f
+Q
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 493.65 173.84 21.20 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 502.45 Tm
+(Gestión de Propiedades) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+215.84 493.65 143.16 21.20 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 221.34 502.45 Tm
+(/admin/propiedades) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+358.99 493.65 97.14 21.20 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 364.49 502.45 Tm
+(Acceso Total) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+456.14 493.65 97.14 21.20 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 461.64 502.45 Tm
+(Acceso Total) Tj
+ET
+q
+0.960 0.975 0.995 rg
+42.00 472.45 511.28 21.20 re f
+Q
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 472.45 173.84 21.20 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 481.25 Tm
+(Gestión de Agentes) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+215.84 472.45 143.16 21.20 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 221.34 481.25 Tm
+(/admin/agentes) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+358.99 472.45 97.14 21.20 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 364.49 481.25 Tm
+(Acceso Total) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+456.14 472.45 97.14 21.20 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 461.64 481.25 Tm
+(Acceso Total) Tj
+ET
+q
+1.000 1.000 1.000 rg
+42.00 451.25 511.28 21.20 re f
+Q
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 451.25 173.84 21.20 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 460.05 Tm
+(Ranking Mensual Actual) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+215.84 451.25 143.16 21.20 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 221.34 460.05 Tm
+(/admin/ranking-actual) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+358.99 451.25 97.14 21.20 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 364.49 460.05 Tm
+(Acceso Total) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+456.14 451.25 97.14 21.20 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 461.64 460.05 Tm
+(Acceso Total) Tj
+ET
+q
+0.960 0.975 0.995 rg
+42.00 418.85 511.28 32.40 re f
+Q
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 418.85 173.84 32.40 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 438.85 Tm
+(Mi Cuenta, Apariencia y Seguridad) Tj
+ET
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 427.65 Tm
+(2FA) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+215.84 418.85 143.16 32.40 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 221.34 438.85 Tm
+(/settings/* y) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 221.34 427.65 Tm
+(/admin/configuracion/*) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+358.99 418.85 97.14 32.40 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 364.49 438.85 Tm
+(Acceso Total) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+456.14 418.85 97.14 32.40 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 461.64 438.85 Tm
+(Acceso Total) Tj
+ET
+q
+1.000 1.000 1.000 rg
+42.00 386.45 511.28 32.40 re f
+Q
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 386.45 173.84 32.40 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 406.45 Tm
+(Portada Principal) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+215.84 386.45 143.16 32.40 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 221.34 406.45 Tm
+(/admin/portada) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+358.99 386.45 97.14 32.40 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 364.49 406.45 Tm
+(Acceso Exclusivo) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+456.14 386.45 97.14 32.40 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 461.64 406.45 Tm
+(Bloqueado \(HTTP) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 461.64 395.25 Tm
+(403\)) Tj
+ET
+q
+0.960 0.975 0.995 rg
+42.00 354.05 511.28 32.40 re f
+Q
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 354.05 173.84 32.40 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 374.05 Tm
+(Gestión de Oficinas \(4 Sedes\)) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+215.84 354.05 143.16 32.40 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 221.34 374.05 Tm
+(/admin/oficinas) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+358.99 354.05 97.14 32.40 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 364.49 374.05 Tm
+(Acceso Exclusivo) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+456.14 354.05 97.14 32.40 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 461.64 374.05 Tm
+(Bloqueado \(HTTP) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 461.64 362.85 Tm
+(403\)) Tj
+ET
+q
+1.000 1.000 1.000 rg
+42.00 321.65 511.28 32.40 re f
+Q
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 321.65 173.84 32.40 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 341.65 Tm
+(Historial de Rankings) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+215.84 321.65 143.16 32.40 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 221.34 341.65 Tm
+(/admin/historial-rankings) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+358.99 321.65 97.14 32.40 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 364.49 341.65 Tm
+(Acceso Exclusivo) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+456.14 321.65 97.14 32.40 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 461.64 341.65 Tm
+(Bloqueado \(HTTP) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 461.64 330.45 Tm
+(403\)) Tj
+ET
+q
+0.960 0.975 0.995 rg
+42.00 289.25 511.28 32.40 re f
+Q
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 289.25 173.84 32.40 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 309.25 Tm
+(Configuración de Contacto Global) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+215.84 289.25 143.16 32.40 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 221.34 309.25 Tm
+(/admin/configuracion-contacto) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+358.99 289.25 97.14 32.40 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 364.49 309.25 Tm
+(Acceso Exclusivo) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+456.14 289.25 97.14 32.40 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 461.64 309.25 Tm
+(Bloqueado \(HTTP) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 461.64 298.05 Tm
+(403\)) Tj
+ET
+q
+1.000 1.000 1.000 rg
+42.00 256.85 511.28 32.40 re f
+Q
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 256.85 173.84 32.40 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 276.85 Tm
+(Gestión de Usuarios y Roles) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+215.84 256.85 143.16 32.40 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 221.34 276.85 Tm
+(/admin/usuarios) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+358.99 256.85 97.14 32.40 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 364.49 276.85 Tm
+(Acceso Exclusivo) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+456.14 256.85 97.14 32.40 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 461.64 276.85 Tm
+(Bloqueado \(HTTP) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 461.64 265.65 Tm
+(403\)) Tj
+ET
+q
+0.000 0.240 0.650 rg
+42.00 218.85 511.28 22.00 re f
+Q
+q
+0.860 0.110 0.180 rg
+42.00 216.35 511.28 2.50 re f
+Q
+BT
+/F2 11.50 Tf
+1.000 1.000 1.000 rg
+1 0 0 1 52.00 225.85 Tm
+(8. Panel Administrativo: Explicación de Cada Módulo y sus Funciones) Tj
+ET
+q
+0.780 0.830 0.900 rg
+42.00 32.00 511.28 0.60 re f
+Q
+BT
+/F1 7.80 Tf
+0.400 0.450 0.550 rg
+1 0 0 1 42.00 21.00 Tm
+(Documento de Estudio - Arquitectura y Componentes de RE/MAX Zona Inmobiliaria) Tj
+ET
+BT
+/F2 8.00 Tf
+0.000 0.240 0.650 rg
+1 0 0 1 495.28 21.00 Tm
+(Página 8 de 11) Tj
+ET
+endstream
+endobj
+22 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 21 0 R >>
+endobj
+23 0 obj
+<< /Length 8482 >>
+stream
+q
+0.750 0.800 0.880 rg
+42.00 807.89 511.28 0.80 re f
+Q
+BT
+/F2 7.50 Tf
+0.000 0.240 0.650 rg
+1 0 0 1 42.00 812.89 Tm
+(MANUAL DE ESTUDIO Y ARQUITECTURA - SISTEMA WEB RE/MAX ZONA INMOBILIARIA) Tj
+ET
+BT
+/F1 7.50 Tf
+0.400 0.450 0.550 rg
+1 0 0 1 458.28 812.89 Tm
+(Laravel 13 + Livewire 4) Tj
+ET
+q
+0.965 0.978 0.995 rg
+0.750 0.820 0.920 RG 0.80 w
+42.00 607.69 511.28 180.20 re B
+Q
+q
+0.000 0.240 0.650 rg
+42.00 607.69 4.50 180.20 re f
+Q
+BT
+/F2 9.80 Tf
+0.000 0.220 0.600 rg
+1 0 0 1 54.00 772.89 Tm
+(Módulo 1: Gestión de Propiedades - GestionPropiedades.php \(/admin/propiedades\)) Tj
+ET
+q
+0.750 0.820 0.920 rg
+54.00 768.89 489.28 0.50 re f
+Q
+q
+0.000 0.240 0.650 rg
+55.00 758.89 3.20 3.20 re f
+Q
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 756.89 Tm
+(Función Principal: Permite a Administradores y Marketing administrar todo el catálogo inmobiliario.) Tj
+ET
+q
+0.000 0.240 0.650 rg
+55.00 743.69 3.20 3.20 re f
+Q
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 741.69 Tm
+(Métodos Clave: nuevaPropiedad\(\) abre el formulario limpio; editarPropiedad\($id\) carga los datos de un) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 729.49 Tm
+(inmueble existente; guardarPropiedad\(\) valida y guarda en BD; alternarDestacada\($id\) marca o desmarca) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 717.29 Tm
+(la propiedad para que aparezca en la página de Inicio; eliminarPropiedad\($id\) borra el registro y) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 705.09 Tm
+(elimina su archivo fotográfico del disco.) Tj
+ET
+q
+0.000 0.240 0.650 rg
+55.00 691.89 3.20 3.20 re f
+Q
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 689.89 Tm
+(Regla de Precio y Moneda: El precio es opcional \(hay proyectos cuyo precio se consulta en la ficha de) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 677.69 Tm
+(RE/MAX Perú\). Pero si se escribe un valor numérico en precio, el sistema exige obligatoriamente) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 665.49 Tm
+(elegir la moneda \(PEN o USD\).) Tj
+ET
+q
+0.000 0.240 0.650 rg
+55.00 652.29 3.20 3.20 re f
+Q
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 650.29 Tm
+(Procesamiento de Imagen: Guarda la foto en storage/app/public/propiedades/ y llama inmediatamente a) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 638.09 Tm
+(ServicioOptimizacionImagen::generarWebpDesdeDiscoPublico\($ruta, 1200\). Si ocurre cualquier error de) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 625.89 Tm
+(BD, revierte y borra la imagen recién subida.) Tj
+ET
+q
+0.965 0.978 0.995 rg
+0.750 0.820 0.920 RG 0.80 w
+42.00 459.09 511.28 140.60 re B
+Q
+q
+0.000 0.240 0.650 rg
+42.00 459.09 4.50 140.60 re f
+Q
+BT
+/F2 9.80 Tf
+0.000 0.220 0.600 rg
+1 0 0 1 54.00 584.69 Tm
+(Módulo 2: Gestión de Agentes - GestionAgentes.php \(/admin/agentes\)) Tj
+ET
+q
+0.750 0.820 0.920 rg
+54.00 580.69 489.28 0.50 re f
+Q
+q
+0.000 0.240 0.650 rg
+55.00 570.69 3.20 3.20 re f
+Q
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 568.69 Tm
+(Función Principal: Administrar el Directorio Institucional de Agentes Inmobiliarios que se exhibe en) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 556.49 Tm
+(la página pública Empresa.) Tj
+ET
+q
+0.000 0.240 0.650 rg
+55.00 543.29 3.20 3.20 re f
+Q
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 541.29 Tm
+(Métodos Clave: nuevoAgente\(\), editarAgente\($id\), guardarAgente\(\), alternarEstado\($id\) \(permite) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 529.09 Tm
+(activar o inactivar/ocultar un agente con un clic sin borrarlo\) y eliminarAgente\($id\).) Tj
+ET
+q
+0.000 0.240 0.650 rg
+55.00 515.89 3.20 3.20 re f
+Q
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 513.89 Tm
+(Normalización Telefónica y WebP: Al editar, usa TelefonoPeru::quitarPrefijo\(\) para mostrar el número) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 501.69 Tm
+(limpio en el input junto al prefijo visual +51, y al guardar usa TelefonoPeru::formatearConPrefijo\(\)) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 489.49 Tm
+(y formatearWhatsapp\(\) para estandarizarlos. La fotografía se convierte automáticamente a WebP con un) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 477.29 Tm
+(ancho máximo de 600 px.) Tj
+ET
+q
+0.995 0.965 0.968 rg
+0.940 0.760 0.780 RG 0.80 w
+42.00 206.89 511.28 244.20 re B
+Q
+q
+0.860 0.110 0.180 rg
+42.00 206.89 4.50 244.20 re f
+Q
+BT
+/F2 9.80 Tf
+0.680 0.080 0.140 rg
+1 0 0 1 54.00 436.09 Tm
+(Módulo 3: Ranking Mensual Actual - GestionRankingActual.php \(/admin/ranking-actual\)) Tj
+ET
+q
+0.940 0.760 0.780 rg
+54.00 432.09 489.28 0.50 re f
+Q
+q
+0.860 0.110 0.180 rg
+55.00 422.09 3.20 3.20 re f
+Q
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 420.09 Tm
+(Sincronización Automática al Entrar: En mount\(\), llama a $servicio->sincronizarEstadosVencidos\(\).) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 407.89 Tm
+(Este método revisa si quedaron rankings de periodos anteriores o cuyo plazo de los 3 primeros días ya) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 395.69 Tm
+(venció: si estaban en PUBLICADO los pasa a CERRADO \(histórico inmutable\), y si quedaron inconclusos) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 383.49 Tm
+(en BORRADOR los pasa a VENCIDO.) Tj
+ET
+q
+0.860 0.110 0.180 rg
+55.00 370.29 3.20 3.20 re f
+Q
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 368.29 Tm
+(Regla de los 3 Primeros Días Calendario: Calcula el periodo actual en zona horaria America/Lima. Solo) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 356.09 Tm
+(permite registrar puestos o publicar si hoy es día 1, 2 o 3 del mes de publicación.) Tj
+ET
+q
+0.860 0.110 0.180 rg
+55.00 342.89 3.20 3.20 re f
+Q
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 340.89 Tm
+(Guardado Individual por Puesto \(guardarPuesto 1, 2 o 3\): Cada puesto se guarda con Nombres,) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 328.69 Tm
+(Apellidos, Celular y una Fotografía especial que se almacena en) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 316.49 Tm
+(storage/app/public/rankings/{anio}/{mes}/puesto-{N}-{uuid}.ext \(con copia WebP a 600 px\).) Tj
+ET
+q
+0.860 0.110 0.180 rg
+55.00 303.29 3.20 3.20 re f
+Q
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 301.29 Tm
+(Validaciones de Dominio en Transacción: 1\) Impide que el mismo número de celular \(normalizado sin) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 289.09 Tm
+(espacios ni +51\) se asigne a dos puestos del mismo mes. 2\) Si detecta el mismo nombre y apellido en) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 276.89 Tm
+(otro puesto con distinto celular, lanza una advertencia visual de posible homónimo. 3\) Limpia) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 264.69 Tm
+(automáticamente del disco las fotos reemplazadas mientras el ranking aún no esté cerrado.) Tj
+ET
+q
+0.860 0.110 0.180 rg
+55.00 251.49 3.20 3.20 re f
+Q
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 249.49 Tm
+(Publicación \(publicarRanking\): Verifica con bloqueo pesimista \(lockForUpdate\) que existan exactamente) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 237.29 Tm
+(los 3 puestos \(1, 2 y 3\), con datos completos, fotos existentes en disco y sin celulares duplicados,) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 225.09 Tm
+(y cambia el estado a PUBLICADO.) Tj
+ET
+q
+0.965 0.978 0.995 rg
+0.750 0.820 0.920 RG 0.80 w
+42.00 125.29 511.28 73.60 re B
+Q
+q
+0.000 0.240 0.650 rg
+42.00 125.29 4.50 73.60 re f
+Q
+BT
+/F2 9.80 Tf
+0.000 0.220 0.600 rg
+1 0 0 1 54.00 183.89 Tm
+(Módulo 4: Portada Principal - GestionPortada.php \(/admin/portada\) [Solo ADMINISTRADOR]) Tj
+ET
+q
+0.750 0.820 0.920 rg
+54.00 179.89 489.28 0.50 re f
+Q
+q
+0.000 0.240 0.650 rg
+55.00 169.89 3.20 3.20 re f
+Q
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 167.89 Tm
+(Permite actualizar la fotografía principal del banner Hero de la página de Inicio. Valida que el) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 155.69 Tm
+(archivo sea JPG, JPEG, PNG o WEBP de hasta 4 MB, lo guarda en storage/app/public/portadas/, genera su) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 143.49 Tm
+(versión WebP a 1920 px de ancho y elimina la foto personalizada anterior.) Tj
+ET
+q
+0.780 0.830 0.900 rg
+42.00 32.00 511.28 0.60 re f
+Q
+BT
+/F1 7.80 Tf
+0.400 0.450 0.550 rg
+1 0 0 1 42.00 21.00 Tm
+(Documento de Estudio - Arquitectura y Componentes de RE/MAX Zona Inmobiliaria) Tj
+ET
+BT
+/F2 8.00 Tf
+0.000 0.240 0.650 rg
+1 0 0 1 495.28 21.00 Tm
+(Página 9 de 11) Tj
+ET
+endstream
+endobj
+24 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 23 0 R >>
+endobj
+25 0 obj
+<< /Length 9395 >>
+stream
+q
+0.750 0.800 0.880 rg
+42.00 807.89 511.28 0.80 re f
+Q
+BT
+/F2 7.50 Tf
+0.000 0.240 0.650 rg
+1 0 0 1 42.00 812.89 Tm
+(MANUAL DE ESTUDIO Y ARQUITECTURA - SISTEMA WEB RE/MAX ZONA INMOBILIARIA) Tj
+ET
+BT
+/F1 7.50 Tf
+0.400 0.450 0.550 rg
+1 0 0 1 458.28 812.89 Tm
+(Laravel 13 + Livewire 4) Tj
+ET
+q
+0.965 0.978 0.995 rg
+0.750 0.820 0.920 RG 0.80 w
+42.00 702.09 511.28 85.80 re B
+Q
+q
+0.000 0.240 0.650 rg
+42.00 702.09 4.50 85.80 re f
+Q
+BT
+/F2 9.80 Tf
+0.000 0.220 0.600 rg
+1 0 0 1 54.00 772.89 Tm
+(Módulo 5: Gestión de Oficinas - GestionOficinas.php \(/admin/oficinas\) [Solo ADMINISTRADOR]) Tj
+ET
+q
+0.750 0.820 0.920 rg
+54.00 768.89 489.28 0.50 re f
+Q
+q
+0.000 0.240 0.650 rg
+55.00 758.89 3.20 3.20 re f
+Q
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 756.89 Tm
+(Muestra un selector con las 4 sedes oficiales \(Arequipa, Lima, Moquegua y Puno\). Al seleccionar una) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 744.69 Tm
+(sede \(seleccionarOficina\), carga su formulario para editar nombre visible, dirección, teléfono,) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 732.49 Tm
+(WhatsApp, correo, horario de atención, enlace de Google Maps y fotografía de la oficina \(convertida a) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 720.29 Tm
+(WebP de 1000 px\).) Tj
+ET
+q
+0.965 0.978 0.995 rg
+0.750 0.820 0.920 RG 0.80 w
+42.00 608.29 511.28 85.80 re B
+Q
+q
+0.000 0.240 0.650 rg
+42.00 608.29 4.50 85.80 re f
+Q
+BT
+/F2 9.80 Tf
+0.000 0.220 0.600 rg
+1 0 0 1 54.00 679.09 Tm
+(Módulo 6: Historial de Rankings - HistorialRankings.php \(/admin/historial-rankings\) [Solo ADMINISTRADOR]) Tj
+ET
+q
+0.750 0.820 0.920 rg
+54.00 675.09 489.28 0.50 re f
+Q
+q
+0.000 0.240 0.650 rg
+55.00 665.09 3.20 3.20 re f
+Q
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 663.09 Tm
+(Módulo de auditoría histórica de solo lectura. Permite filtrar por Año de desempeño y Mes de) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 650.89 Tm
+(desempeño para visualizar las tarjetas de los 3 ganadores históricos de ese mes \(con sus datos y) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 638.69 Tm
+(fotografías snapshot intactas, estado, fecha de publicación/cierre y usuario creador\), además de) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 626.49 Tm
+(listar la tabla histórica general.) Tj
+ET
+q
+0.965 0.978 0.995 rg
+0.750 0.820 0.920 RG 0.80 w
+42.00 526.69 511.28 73.60 re B
+Q
+q
+0.000 0.240 0.650 rg
+42.00 526.69 4.50 73.60 re f
+Q
+BT
+/F2 9.80 Tf
+0.000 0.220 0.600 rg
+1 0 0 1 54.00 585.29 Tm
+(Módulo 7: Contacto Global - GestionContacto.php \(/admin/configuracion-contacto\) [Solo ADMIN]) Tj
+ET
+q
+0.750 0.820 0.920 rg
+54.00 581.29 489.28 0.50 re f
+Q
+q
+0.000 0.240 0.650 rg
+55.00 571.29 3.20 3.20 re f
+Q
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 569.29 Tm
+(Actualiza los datos globales de ConfiguracionContacto \(id = 1\): nombre de la empresa, teléfono) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 557.09 Tm
+(visible, WhatsApp general de atención, correo de contacto, dirección/cobertura, horario de lunes a) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 544.89 Tm
+(viernes, horario de sábados y WhatsApp de postulación laboral.) Tj
+ET
+q
+0.965 0.978 0.995 rg
+0.750 0.820 0.920 RG 0.80 w
+42.00 445.09 511.28 73.60 re B
+Q
+q
+0.000 0.240 0.650 rg
+42.00 445.09 4.50 73.60 re f
+Q
+BT
+/F2 9.80 Tf
+0.000 0.220 0.600 rg
+1 0 0 1 54.00 503.69 Tm
+(Módulo 8: Gestión de Usuarios y Roles - GestionUsuarios.php \(/admin/usuarios\) [Solo ADMINISTRADOR]) Tj
+ET
+q
+0.750 0.820 0.920 rg
+54.00 499.69 489.28 0.50 re f
+Q
+q
+0.000 0.240 0.650 rg
+55.00 489.69 3.20 3.20 re f
+Q
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 487.69 Tm
+(Permite crear nuevas cuentas administrativas o editar las existentes, asignando el rol \(ADMINISTRADOR) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 475.49 Tm
+(o MARKETING\), estado \(Activo / Inactivo\) y contraseña. Incluye protección explícita para que el) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 463.29 Tm
+(Administrador en sesión no pueda desactivar su propia cuenta ni quitarse el rol de Administrador.) Tj
+ET
+q
+0.965 0.978 0.995 rg
+0.750 0.820 0.920 RG 0.80 w
+42.00 308.69 511.28 128.40 re B
+Q
+q
+0.000 0.240 0.650 rg
+42.00 308.69 4.50 128.40 re f
+Q
+BT
+/F2 9.80 Tf
+0.000 0.220 0.600 rg
+1 0 0 1 54.00 422.09 Tm
+(Módulo 9: Mi Cuenta, Apariencia y Seguridad 2FA - Profile.php, Appearance.php y Security.php \(/settings/*\)) Tj
+ET
+q
+0.750 0.820 0.920 rg
+54.00 418.09 489.28 0.50 re f
+Q
+q
+0.000 0.240 0.650 rg
+55.00 408.09 3.20 3.20 re f
+Q
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 406.09 Tm
+(Perfil \(Profile.php\): Permite editar nombre y correo propio. Si el usuario modifica su correo) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 393.89 Tm
+(electrónico, exige confirmar la contraseña actual.) Tj
+ET
+q
+0.000 0.240 0.650 rg
+55.00 380.69 3.20 3.20 re f
+Q
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 378.69 Tm
+(Apariencia \(Appearance.php\): Permite alternar entre Modo Claro y Modo Oscuro. Guarda la preferencia) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 366.49 Tm
+(en la base de datos \(usuarios.tema\) y actualiza la interfaz en vivo.) Tj
+ET
+q
+0.000 0.240 0.650 rg
+55.00 353.29 3.20 3.20 re f
+Q
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 351.29 Tm
+(Seguridad \(Security.php\): Permite cambiar la contraseña y gestionar la Autenticación de Dos Factores) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 339.09 Tm
+(\(2FA\): genera el código QR en formato SVG para escanear con el celular, exige confirmar el código de) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 326.89 Tm
+(6 dígitos para activarlo y muestra/regenera los 8 códigos de recuperación de emergencia.) Tj
+ET
+q
+0.000 0.240 0.650 rg
+42.00 272.69 511.28 22.00 re f
+Q
+q
+0.860 0.110 0.180 rg
+42.00 270.19 511.28 2.50 re f
+Q
+BT
+/F2 11.50 Tf
+1.000 1.000 1.000 rg
+1 0 0 1 52.00 279.69 Tm
+(9. Servicios Técnicos, Comandos Artisan y Requerimientos No Funcionales \(RNF\)) Tj
+ET
+BT
+/F1 9.40 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 42.00 251.29 Tm
+(El sistema implementa y verifica mediante pruebas automatizadas) Tj
+ET
+BT
+/F1 9.40 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 42.00 238.32 Tm
+(\(tests/Feature/RequerimientosNoFuncionalesTest.php con 36 pruebas y 157 aserciones aprobadas\) seis) Tj
+ET
+BT
+/F1 9.40 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 42.00 225.35 Tm
+(requerimientos no funcionales críticos de calidad de software:) Tj
+ET
+q
+0.000 0.240 0.650 rg
+0.000 0.240 0.650 RG 0.70 w
+42.00 196.77 511.28 20.00 re B
+Q
+BT
+/F2 8.60 Tf
+1.000 1.000 1.000 rg
+1 0 0 1 47.50 203.27 Tm
+(Código RNF) Tj
+ET
+BT
+/F2 8.60 Tf
+1.000 1.000 1.000 rg
+1 0 0 1 119.08 203.27 Tm
+(Nombre del Requerimiento) Tj
+ET
+BT
+/F2 8.60 Tf
+1.000 1.000 1.000 rg
+1 0 0 1 262.24 203.27 Tm
+(Archivos y Comandos que lo implementan en el Proyecto) Tj
+ET
+q
+1.000 1.000 1.000 rg
+42.00 130.77 511.28 66.00 re f
+Q
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 130.77 71.58 66.00 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 184.37 Tm
+(RNF025) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+113.58 130.77 143.16 66.00 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 119.08 184.37 Tm
+(Accesibilidad Web \(WCAG 2.1) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 119.08 173.17 Tm
+(AA\)) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+256.74 130.77 296.54 66.00 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 262.24 184.37 Tm
+(Implementado en publico.blade.php, admin.blade.php,) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 262.24 173.17 Tm
+(iniciar-sesion.blade.php, styles.css y admin.css. Incluye) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 262.24 161.97 Tm
+(skip-links, aria-current="page", roles semánticos, indicadores) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 262.24 150.77 Tm
+(:focus-visible para teclado, mensajes de error con role="alert") Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 262.24 139.57 Tm
+(y relación de contraste >= 4.5:1.) Tj
+ET
+q
+0.960 0.975 0.995 rg
+42.00 64.77 511.28 66.00 re f
+Q
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 64.77 71.58 66.00 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 118.37 Tm
+(RNF026) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+113.58 64.77 143.16 66.00 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 119.08 118.37 Tm
+(Optimización SEO y Datos) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 119.08 107.17 Tm
+(Estructurados) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+256.74 64.77 296.54 66.00 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 262.24 118.37 Tm
+(Implementado en publico.blade.php,) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 262.24 107.17 Tm
+(Propiedad::construirDatosEstructuradosCatalogo\(\),) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 262.24 95.97 Tm
+(public/robots.txt y ruta GET /sitemap.xml. Genera títulos) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 262.24 84.77 Tm
+(únicos, meta description, canonical, Open Graph, Twitter Cards y) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 262.24 73.57 Tm
+(JSON-LD \(RealEstateAgent e ItemList\).) Tj
+ET
+q
+0.780 0.830 0.900 rg
+42.00 32.00 511.28 0.60 re f
+Q
+BT
+/F1 7.80 Tf
+0.400 0.450 0.550 rg
+1 0 0 1 42.00 21.00 Tm
+(Documento de Estudio - Arquitectura y Componentes de RE/MAX Zona Inmobiliaria) Tj
+ET
+BT
+/F2 8.00 Tf
+0.000 0.240 0.650 rg
+1 0 0 1 495.28 21.00 Tm
+(Página 10 de 11) Tj
+ET
+endstream
+endobj
+26 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 25 0 R >>
+endobj
+27 0 obj
+<< /Length 8721 >>
+stream
+q
+0.750 0.800 0.880 rg
+42.00 807.89 511.28 0.80 re f
+Q
+BT
+/F2 7.50 Tf
+0.000 0.240 0.650 rg
+1 0 0 1 42.00 812.89 Tm
+(MANUAL DE ESTUDIO Y ARQUITECTURA - SISTEMA WEB RE/MAX ZONA INMOBILIARIA) Tj
+ET
+BT
+/F1 7.50 Tf
+0.400 0.450 0.550 rg
+1 0 0 1 458.28 812.89 Tm
+(Laravel 13 + Livewire 4) Tj
+ET
+q
+0.000 0.240 0.650 rg
+0.000 0.240 0.650 RG 0.70 w
+42.00 767.89 511.28 20.00 re B
+Q
+BT
+/F2 8.60 Tf
+1.000 1.000 1.000 rg
+1 0 0 1 47.50 774.39 Tm
+(Código RNF) Tj
+ET
+BT
+/F2 8.60 Tf
+1.000 1.000 1.000 rg
+1 0 0 1 119.08 774.39 Tm
+(Nombre del Requerimiento) Tj
+ET
+BT
+/F2 8.60 Tf
+1.000 1.000 1.000 rg
+1 0 0 1 262.24 774.39 Tm
+(Archivos y Comandos que lo implementan en el Proyecto) Tj
+ET
+q
+1.000 1.000 1.000 rg
+42.00 701.89 511.28 66.00 re f
+Q
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 701.89 71.58 66.00 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 755.49 Tm
+(RNF027) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+113.58 701.89 143.16 66.00 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 119.08 755.49 Tm
+(Disponibilidad del Sistema) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 119.08 744.29 Tm
+(\(99%\) y Salud) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+256.74 701.89 296.54 66.00 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 262.24 755.49 Tm
+(Implementado en ServicioDisponibilidad.php,) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 262.24 744.29 Tm
+(EstadoSistemaController.php \(GET /salud\) y comando "php artisan) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 262.24 733.09 Tm
+(sistema:verificar-salud" programado cada 5 minutos en) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 262.24 721.89 Tm
+(routes/console.php. Registra fallos críticos de BD o disco en) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 262.24 710.69 Tm
+(storage/logs/disponibilidad.log.) Tj
+ET
+q
+0.960 0.975 0.995 rg
+42.00 635.89 511.28 66.00 re f
+Q
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 635.89 71.58 66.00 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 689.49 Tm
+(RNF028) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+113.58 635.89 143.16 66.00 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 119.08 689.49 Tm
+(Copias de Seguridad y) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 119.08 678.29 Tm
+(Recuperación SHA-256) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+256.74 635.89 296.54 66.00 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 262.24 689.49 Tm
+(Implementado en ServicioRespaldo.php y comandos "php artisan) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 262.24 678.29 Tm
+(sistema:respaldar" \(programado diario a las 02:30 a.m.\) y "php) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 262.24 667.09 Tm
+(artisan sistema:verificar-respaldo {directorio}". Guarda volcado) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 262.24 655.89 Tm
+(de BD + multimedia.zip + manifiesto.json con hashes SHA-256 en) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 262.24 644.69 Tm
+(storage/app/private/respaldos/.) Tj
+ET
+q
+1.000 1.000 1.000 rg
+42.00 569.89 511.28 66.00 re f
+Q
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 569.89 71.58 66.00 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 623.49 Tm
+(RNF029) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+113.58 569.89 143.16 66.00 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 119.08 623.49 Tm
+(Protección contra Ataques Web) Tj
+ET
+q
+1.000 1.000 1.000 rg
+0.780 0.830 0.900 RG 0.50 w
+256.74 569.89 296.54 66.00 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 262.24 623.49 Tm
+(Implementado en CabecerasSeguridad.php \(CSP, X-Frame-Options,) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 262.24 612.29 Tm
+(nosniff, Referrer-Policy, Permissions-Policy, HSTS\),) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 262.24 601.09 Tm
+(AppServiceProvider.php \(HTTPS forzado y contraseñas robustas en) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 262.24 589.89 Tm
+(producción\), storage/app/public/.htaccess \(bloqueo de ejecución) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 262.24 578.69 Tm
+(de scripts\) y RateLimiter en login/2FA.) Tj
+ET
+q
+0.960 0.975 0.995 rg
+42.00 503.89 511.28 66.00 re f
+Q
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+42.00 503.89 71.58 66.00 re B
+Q
+BT
+/F2 8.40 Tf
+0.050 0.180 0.450 rg
+1 0 0 1 47.50 557.49 Tm
+(RNF030) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+113.58 503.89 143.16 66.00 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 119.08 557.49 Tm
+(Optimización de Imágenes) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 119.08 546.29 Tm
+(\(WebP\) y Caché) Tj
+ET
+q
+0.960 0.975 0.995 rg
+0.780 0.830 0.900 RG 0.50 w
+256.74 503.89 296.54 66.00 re B
+Q
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 262.24 557.49 Tm
+(Implementado en ServicioOptimizacionImagen.php, componente) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 262.24 546.29 Tm
+(<x-imagen-optimizada>, comando "php artisan) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 262.24 535.09 Tm
+(sistema:optimizar-imagenes" y public/.htaccess \(compresión GZIP) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 262.24 523.89 Tm
+(mod_deflate y caché mod_expires\). Convierte fotos a WebP sin) Tj
+ET
+BT
+/F1 8.40 Tf
+0.130 0.170 0.240 rg
+1 0 0 1 262.24 512.69 Tm
+(borrar los originales.) Tj
+ET
+q
+0.000 0.240 0.650 rg
+42.00 465.89 511.28 22.00 re f
+Q
+q
+0.860 0.110 0.180 rg
+42.00 463.39 511.28 2.50 re f
+Q
+BT
+/F2 11.50 Tf
+1.000 1.000 1.000 rg
+1 0 0 1 52.00 472.89 Tm
+(10. Guía Práctica para Probar y Estudiar el Proyecto en tu Computadora) Tj
+ET
+BT
+/F1 9.40 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 42.00 444.49 Tm
+(Para levantar, probar y estudiar cada módulo de la página web en tu entorno local, utiliza los) Tj
+ET
+BT
+/F1 9.40 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 42.00 431.52 Tm
+(siguientes comandos y credenciales iniciales definidas en database/seeders/DatabaseSeeder.php:) Tj
+ET
+q
+0.955 0.990 0.965 rg
+0.720 0.880 0.780 RG 0.80 w
+42.00 334.15 511.28 88.80 re B
+Q
+q
+0.090 0.580 0.280 rg
+42.00 334.15 4.50 88.80 re f
+Q
+BT
+/F2 9.80 Tf
+0.060 0.420 0.200 rg
+1 0 0 1 54.00 407.95 Tm
+(Credenciales de Prueba \(Creadas por DatabaseSeeder.php\)) Tj
+ET
+q
+0.720 0.880 0.780 rg
+54.00 403.95 489.28 0.50 re f
+Q
+q
+0.090 0.580 0.280 rg
+55.00 393.95 3.20 3.20 re f
+Q
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 391.95 Tm
+(Cuenta de Administrador Total -> Correo: admin@remaxzona.com | Contraseña: admin12345 | Rol:) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 379.75 Tm
+(ADMINISTRADOR \(ve los 9 módulos\)) Tj
+ET
+q
+0.090 0.580 0.280 rg
+55.00 366.55 3.20 3.20 re f
+Q
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 364.55 Tm
+(Cuenta de Marketing Comercial -> Correo: marketing@remaxzona.com | Contraseña: marketing12345 | Rol:) Tj
+ET
+BT
+/F1 8.90 Tf
+0.120 0.160 0.230 rg
+1 0 0 1 63.00 352.35 Tm
+(MARKETING \(ve Propiedades, Agentes, Ranking y Mi Cuenta\)) Tj
+ET
+q
+0.070 0.100 0.170 rg
+0.200 0.280 0.400 RG 0.80 w
+42.00 153.35 511.28 172.80 re B
+Q
+BT
+/F4 8.00 Tf
+0.920 0.960 1.000 rg
+1 0 0 1 52.00 312.15 Tm
+(# 1. Iniciar el servidor web local de desarrollo:) Tj
+ET
+BT
+/F4 8.00 Tf
+0.920 0.960 1.000 rg
+1 0 0 1 52.00 300.95 Tm
+(php artisan serve) Tj
+ET
+BT
+/F4 8.00 Tf
+0.920 0.960 1.000 rg
+1 0 0 1 52.00 289.75 Tm
+() Tj
+ET
+BT
+/F4 8.00 Tf
+0.920 0.960 1.000 rg
+1 0 0 1 52.00 278.55 Tm
+(# 2. Optimizar por lotes todas las fotografías existentes a formato WebP:) Tj
+ET
+BT
+/F4 8.00 Tf
+0.920 0.960 1.000 rg
+1 0 0 1 52.00 267.35 Tm
+(php artisan sistema:optimizar-imagenes) Tj
+ET
+BT
+/F4 8.00 Tf
+0.920 0.960 1.000 rg
+1 0 0 1 52.00 256.15 Tm
+() Tj
+ET
+BT
+/F4 8.00 Tf
+0.920 0.960 1.000 rg
+1 0 0 1 52.00 244.95 Tm
+(# 3. Verificar el estado de salud del sistema \(Base de datos y Almacenamiento\):) Tj
+ET
+BT
+/F4 8.00 Tf
+0.920 0.960 1.000 rg
+1 0 0 1 52.00 233.75 Tm
+(php artisan sistema:verificar-salud) Tj
+ET
+BT
+/F4 8.00 Tf
+0.920 0.960 1.000 rg
+1 0 0 1 52.00 222.55 Tm
+() Tj
+ET
+BT
+/F4 8.00 Tf
+0.920 0.960 1.000 rg
+1 0 0 1 52.00 211.35 Tm
+(# 4. Generar una copia de seguridad completa \(BD + multimedia.zip + manifiesto SHA-256\):) Tj
+ET
+BT
+/F4 8.00 Tf
+0.920 0.960 1.000 rg
+1 0 0 1 52.00 200.15 Tm
+(php artisan sistema:respaldar) Tj
+ET
+BT
+/F4 8.00 Tf
+0.920 0.960 1.000 rg
+1 0 0 1 52.00 188.95 Tm
+() Tj
+ET
+BT
+/F4 8.00 Tf
+0.920 0.960 1.000 rg
+1 0 0 1 52.00 177.75 Tm
+(# 5. Ejecutar toda la batería de pruebas automatizadas \(36 tests / 157 aserciones\):) Tj
+ET
+BT
+/F4 8.00 Tf
+0.920 0.960 1.000 rg
+1 0 0 1 52.00 166.55 Tm
+(php artisan test) Tj
+ET
+q
+0.780 0.830 0.900 rg
+42.00 32.00 511.28 0.60 re f
+Q
+BT
+/F1 7.80 Tf
+0.400 0.450 0.550 rg
+1 0 0 1 42.00 21.00 Tm
+(Documento de Estudio - Arquitectura y Componentes de RE/MAX Zona Inmobiliaria) Tj
+ET
+BT
+/F2 8.00 Tf
+0.000 0.240 0.650 rg
+1 0 0 1 495.28 21.00 Tm
+(Página 11 de 11) Tj
+ET
+endstream
+endobj
+28 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 27 0 R >>
+endobj
+xref
+0 29
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000194 00000 n 
+0000000291 00000 n 
+0000000393 00000 n 
+0000000498 00000 n 
+0000000593 00000 n 
+0000008649 00000 n 
+0000008811 00000 n 
+0000020592 00000 n 
+0000020755 00000 n 
+0000032907 00000 n 
+0000033071 00000 n 
+0000047835 00000 n 
+0000047999 00000 n 
+0000063664 00000 n 
+0000063828 00000 n 
+0000072740 00000 n 
+0000072904 00000 n 
+0000081261 00000 n 
+0000081425 00000 n 
+0000093107 00000 n 
+0000093271 00000 n 
+0000101805 00000 n 
+0000101969 00000 n 
+0000111416 00000 n 
+0000111580 00000 n 
+0000120353 00000 n 
+trailer
+<< /Size 29 /Root 1 0 R >>
+startxref
+120517
+%%EOF

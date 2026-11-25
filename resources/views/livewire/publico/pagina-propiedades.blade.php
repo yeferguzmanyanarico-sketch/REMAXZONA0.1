@@ -9,7 +9,7 @@
         </section>
 
         <section class="section section--muted" id="propiedades" aria-labelledby="properties-title">
-            <div class="container">
+            <div class="container container--wide">
                 <div class="section-heading">
                     <p class="eyebrow eyebrow--blue">Catálogo inmobiliario</p>
                     <h2 id="properties-title">Consulta nuestras propiedades</h2>
@@ -57,8 +57,16 @@
                 <div class="card-grid card-grid--properties" id="featured-properties">
                     @forelse($propiedades as $propiedad)
                         <article class="card property-card" wire:key="propiedad-{{ $propiedad->id }}">
-                            <img src="{{ $propiedad->url_imagen }}" alt="{{ $propiedad->nombre }}">
-                            <div>
+                            <div class="property-card__media">
+                                <x-imagen-optimizada
+                                    :ruta="$propiedad->imagen ?? ''"
+                                    :src="$propiedad->url_imagen"
+                                    :alt="$propiedad->nombre"
+                                    width="600"
+                                    height="400"
+                                />
+                            </div>
+                            <div class="property-card__body">
                                 <h3>{{ $propiedad->nombre }}</h3>
                                 <p>{{ $propiedad->ubicacion }}</p>
                                 @if($propiedad->precio_formateado)

@@ -71,6 +71,7 @@ class GestionPortada extends Component
 
         $imagenAnterior = $portada->imagen;
         $rutaImagenNueva = $this->imagenArchivo->store('portadas', 'public');
+        app(\App\Services\ServicioOptimizacionImagen::class)->generarWebpDesdeDiscoPublico($rutaImagenNueva, 1920);
 
         try {
             $portada->update([

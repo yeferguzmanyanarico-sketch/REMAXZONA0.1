@@ -20,11 +20,13 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        DB::statement("
-            ALTER TABLE `usuarios`
-            ADD CONSTRAINT `chk_usuarios_rol`
-            CHECK (`rol` IN ('ADMINISTRADOR', 'MARKETING'))
-        ");
+        if (DB::getDriverName() === 'mysql' || DB::getDriverName() === 'mariadb') {
+            DB::statement("
+                ALTER TABLE `usuarios`
+                ADD CONSTRAINT `chk_usuarios_rol`
+                CHECK (`rol` IN ('ADMINISTRADOR', 'MARKETING'))
+            ");
+        }
     }
 
     public function down(): void

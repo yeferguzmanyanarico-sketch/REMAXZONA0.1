@@ -2,8 +2,9 @@
 
 namespace Tests\Feature\Settings;
 
+use App\Livewire\Settings\Appearance;
 use App\Livewire\Settings\Profile;
-use App\Models\User;
+use App\Models\Usuario;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Livewire\Livewire;
 use Tests\TestCase;
@@ -12,79 +13,98 @@ class ProfileUpdateTest extends TestCase
 {
     use RefreshDatabase;
 
-    public function test_profile_page_is_displayed(): void
+    public function test_profile_page_is_displayed_for_admin_and_marketing(): void
     {
-        $this->actingAs($user = User::factory()->create());
+        $admin = Usuario::factory()->administrador()->create();
+        $marketing = Usuario::factory()->marketing()->create();
 
-        $this->get('/settings/profile')->assertOk();
+        $this->actingAs($admin)->get('/settings/profile')->assertOk();
+        $this->actingAs($marketing)->get('/settings/profile')->assertOk();
+        $this->actingAs($marketing)->get('/admin/configuracion/perfil')->assertOk();
     }
 
-    public function test_profile_information_can_be_updated(): void
+    public function test_profile_name_can_be_updated_without_current_password(): void
     {
-        $user = User::factory()->create();
+        $user = Usuario::factory()->create([
+            'nombre' => 'Nombre Original',
+            'correo' => 'original@remaxzona.com',
+        ]);
 
         $this->actingAs($user);
 
-        $response = Livewire::test(Profile::class)
-            ->set('name', 'Test User')
-            ->set('email', 'test@example.com')
-            ->call('updateProfileInformation');
-
-        $response->assertHasNoErrors();
+        Livewire::test(Profile::class)
+            ->set('nombre', 'Nombre Actualizado')
+            ->set('correo', 'original@remaxzona.com')
+            ->call('actualizarPerfil')
+            ->assertHasNoErrors();
 
         $user->refresh();
-
-        $this->assertEquals('Test User', $user->name);
-        $this->assertEquals('test@example.com', $user->email);
-        $this->assertNull($user->email_verified_at);
+        $this->assertEquals('Nombre Actualizado', $user->nombre);
+        $this->assertEquals('original@remaxzona.com', $user->correo);
     }
 
-    public function test_email_verification_status_is_unchanged_when_email_address_is_unchanged(): void
+    public function test_updating_email_requires_valid_current_password_and_uniqueness(): void
     {
-        $user = User::factory()->create();
+        Usuario::factory()->create(['correo' => 'ocupado@remaxzona.com']);
+        $user = Usuario::factory()->create(['correo' => 'actual@remaxzona.com']);
 
         $this->actingAs($user);
 
-        $response = Livewire::test(Profile::class)
-            ->set('name', 'Test User')
-            ->set('email', $user->email)
-            ->call('updateProfileInformation');
+        // Intento de cambiar correo sin contraseña actual
+        Livewire::test(Profile::class)
+            ->set('nombre', $user->nombre)
+            ->set('correo', 'nuevo@remaxzona.com')
+            ->set('password_actual', '')
+            ->call('actualizarPerfil')
+            ->assertHasErrors(['password_actual']);
 
-        $response->assertHasNoErrors();
+        // Intento con contraseña actual incorrecta
+        Livewire::test(Profile::class)
+            ->set('nombre', $user->nombre)
+            ->set('correo', 'nuevo@remaxzona.com')
+            ->set('password_actual', 'clave-incorrecta')
+            ->call('actualizarPerfil')
+            ->assertHasErrors(['password_actual']);
 
-        $this->assertNotNull($user->refresh()->email_verified_at);
+        // Intento con correo duplicado
+        Livewire::test(Profile::class)
+            ->set('nombre', $user->nombre)
+            ->set('correo', 'ocupado@remaxzona.com')
+            ->set('password_actual', 'password')
+            ->call('actualizarPerfil')
+            ->assertHasErrors(['correo']);
+
+        // Cambio exitoso con contraseña actual válida
+        Livewire::test(Profile::class)
+            ->set('nombre', 'Usuario Renovado')
+            ->set('correo', 'nuevo@remaxzona.com')
+            ->set('password_actual', 'password')
+            ->call('actualizarPerfil')
+            ->assertHasNoErrors();
+
+        $user->refresh();
+        $this->assertEquals('Usuario Renovado', $user->nombre);
+        $this->assertEquals('nuevo@remaxzona.com', $user->correo);
     }
 
-    public function test_user_can_delete_their_account(): void
+    public function test_appearance_theme_preference_can_be_saved_and_persisted(): void
     {
-        $user = User::factory()->create();
+        $user = Usuario::factory()->create(['tema' => Usuario::TEMA_CLARO]);
 
         $this->actingAs($user);
 
-        $response = Livewire::test('settings.delete-user-form')
-            ->set('password', 'password')
-            ->call('deleteUser');
+        Livewire::test(Appearance::class)
+            ->set('tema', Usuario::TEMA_OSCURO)
+            ->call('guardarApariencia')
+            ->assertHasNoErrors();
 
-        $response
-            ->assertHasNoErrors()
-            ->assertRedirect('/');
+        $this->assertEquals(Usuario::TEMA_OSCURO, $user->fresh()->tema);
+        $this->assertTrue($user->fresh()->usaTemaOscuro());
 
-        $this->assertNull($user->fresh());
-        $this->assertFalse(auth()->check());
-    }
-
-    public function test_correct_password_must_be_provided_to_delete_account(): void
-    {
-        $user = User::factory()->create();
-
-        $this->actingAs($user);
-
-        $response = Livewire::test('settings.delete-user-form')
-            ->set('password', 'wrong-password')
-            ->call('deleteUser');
-
-        $response->assertHasErrors(['password']);
-
-        $this->assertNotNull($user->fresh());
+        // Verificar que el layout administrativo aplica la clase dark-mode
+        $this->actingAs($user->fresh())
+            ->get(route('appearance.edit'))
+            ->assertOk()
+            ->assertSee('dark-mode', false);
     }
 }

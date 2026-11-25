@@ -93,4 +93,41 @@ class Propiedad extends Model
 
         return self::OFICINAS[$this->oficina] ?? null;
     }
+
+    /**
+     * Construye el esquema JSON-LD ItemList para catálogos de propiedades reales.
+     *
+     * @param  iterable<int, self>  $propiedades
+     */
+    public static function construirDatosEstructuradosCatalogo(iterable $propiedades, string $nombreLista): array
+    {
+        $items = [];
+        $posicion = 1;
+
+        foreach ($propiedades as $propiedad) {
+            $item = [
+                '@type' => 'ListItem',
+                'position' => $posicion++,
+                'name' => $propiedad->nombre,
+            ];
+
+            if (! empty($propiedad->enlace_remax)) {
+                $item['url'] = $propiedad->enlace_remax;
+            }
+
+            if (! empty($propiedad->url_imagen)) {
+                $item['image'] = url($propiedad->url_imagen);
+            }
+
+            $items[] = $item;
+        }
+
+        return [
+            '@context' => 'https://schema.org',
+            '@type' => 'ItemList',
+            'name' => $nombreLista,
+            'numberOfItems' => count($items),
+            'itemListElement' => $items,
+        ];
+    }
 }

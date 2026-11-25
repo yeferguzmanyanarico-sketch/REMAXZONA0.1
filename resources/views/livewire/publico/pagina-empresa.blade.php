@@ -11,7 +11,13 @@
         <section class="section" id="nosotros" aria-labelledby="about-title">
             <div class="container about-grid">
                 <div class="about-image">
-                    <img src="{{ asset('images/Premios.jpeg') }}" alt="Reconocimientos recibidos por RE/MAX Zona">
+                    <x-imagen-optimizada
+                        ruta="images/Premios.jpeg"
+                        :src="asset('images/Premios.jpeg')"
+                        alt="Reconocimientos recibidos por RE/MAX Zona"
+                        width="800"
+                        height="600"
+                    />
                 </div>
                 <div class="about-copy">
                     <p class="eyebrow eyebrow--blue">{{ $contacto->nombre_empresa }}</p>
@@ -78,10 +84,13 @@
                                         3.er Puesto
                                     @endif
                                 </span>
-                                <img
-                                    src="{{ $posicion->url_foto_snapshot }}"
+                                <x-imagen-optimizada
+                                    :ruta="$posicion->foto_snapshot ?? ''"
+                                    :src="$posicion->url_foto_snapshot"
                                     alt="{{ $posicion->nombre_completo_snapshot }}, asesor inmobiliario"
-                                >
+                                    width="400"
+                                    height="480"
+                                />
                                 <h3>{{ $posicion->nombre_completo_snapshot }}</h3>
                                 <a
                                     href="https://api.whatsapp.com/send/?phone={{ $posicion->celular_whatsapp_snapshot }}"
@@ -96,6 +105,71 @@
                 @else
                     <div class="ranking-updating-box" role="status">
                         Ranking mensual en actualización. Pronto conocerás a nuestros vendedores destacados del mes
+                    </div>
+                @endif
+            </div>
+        </section>
+
+        <section class="section section--muted" id="directorio-agentes" aria-labelledby="directory-agents-title">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow eyebrow--blue">Directorio institucional</p>
+                    <h2 id="directory-agents-title">Nuestros agentes inmobiliarios</h2>
+                    <p class="section-subtitle">
+                        Conoce a los profesionales autorizados de {{ $contacto->nombre_empresa }} listos para brindarte asesoría personalizada.
+                    </p>
+                </div>
+
+                @if($agentesActivos->isNotEmpty())
+                    <div class="card-grid card-grid--agents" id="company-agents-directory">
+                        @foreach($agentesActivos as $agente)
+                            <article class="card directory-agent-card" wire:key="agente-publico-{{ $agente->id }}">
+                                <x-imagen-optimizada
+                                    class="directory-agent-card__photo"
+                                    :ruta="$agente->fotografia ?? ''"
+                                    :src="$agente->url_fotografia"
+                                    alt="{{ $agente->nombre_completo }}, agente inmobiliario de {{ $contacto->nombre_empresa }}"
+                                    width="400"
+                                    height="480"
+                                />
+                                <div class="directory-agent-card__body">
+                                    <h3>{{ $agente->nombre_completo }}</h3>
+                                    <p class="directory-agent-card__bio">{{ $agente->biografia }}</p>
+
+                                    <div class="directory-agent-card__contacts">
+                                        @if($agente->celular)
+                                            <a href="{{ $agente->celular_enlace }}" class="directory-agent-contact">
+                                                <span class="directory-agent-contact__icon" aria-hidden="true">☎</span>
+                                                <span class="directory-agent-contact__text">Celular: {{ $agente->celular }}</span>
+                                            </a>
+                                        @endif
+
+                                        @if($agente->whatsapp)
+                                            <a
+                                                href="{{ $agente->whatsapp_enlace }}"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                class="directory-agent-contact directory-agent-contact--whatsapp"
+                                            >
+                                                <span class="directory-agent-contact__icon" aria-hidden="true">💬</span>
+                                                <span class="directory-agent-contact__text">WhatsApp: {{ $agente->whatsapp_visible }}</span>
+                                            </a>
+                                        @endif
+
+                                        @if($agente->correo)
+                                            <a href="mailto:{{ $agente->correo }}" class="directory-agent-contact">
+                                                <span class="directory-agent-contact__icon" aria-hidden="true">✉</span>
+                                                <span class="directory-agent-contact__text">{{ $agente->correo }}</span>
+                                            </a>
+                                        @endif
+                                    </div>
+                                </div>
+                            </article>
+                        @endforeach
+                    </div>
+                @else
+                    <div class="empty-state-box" role="status">
+                        <p>Pronto publicaremos el directorio actualizado de nuestros agentes inmobiliarios.</p>
                     </div>
                 @endif
             </div>

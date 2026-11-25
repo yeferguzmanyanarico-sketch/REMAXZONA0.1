@@ -64,6 +64,10 @@ class PaginaPropiedades extends Component
             'ubicacionesDisponibles' => $ubicacionesDisponibles,
             'totalActivas' => $totalActivas,
             'contacto' => $contacto,
+        ])->layoutData([
+            'metaDescription' => 'Explora el catálogo de propiedades disponibles en RE/MAX Zona: casas, departamentos, terrenos y locales comerciales con ficha oficial de RE/MAX Perú.',
+            'canonicalUrl' => route('propiedades'),
+            'datosEstructurados' => Propiedad::construirDatosEstructuradosCatalogo($propiedades, 'Catálogo de propiedades RE/MAX Zona'),
         ]);
     }
 }

@@ -2,16 +2,18 @@
 
 namespace Database\Factories;
 
-use App\Models\User;
+use App\Models\Usuario;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 
 /**
- * @extends Factory<User>
+ * @extends Factory<Usuario>
  */
 class UserFactory extends Factory
 {
+    protected $model = Usuario::class;
+
     /**
      * The current password being used by the factory.
      */
@@ -25,40 +27,39 @@ class UserFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => fake()->name(),
-            'email' => fake()->unique()->safeEmail(),
-            'email_verified_at' => now(),
+            'nombre' => fake()->name(),
+            'correo' => fake()->unique()->safeEmail(),
             'password' => static::$password ??= Hash::make('password'),
+            'rol' => Usuario::ROL_MARKETING,
+            'activo' => true,
+            'tema' => Usuario::TEMA_CLARO,
             'remember_token' => Str::random(10),
-            /* @chisel-2fa */
             'two_factor_secret' => null,
             'two_factor_recovery_codes' => null,
             'two_factor_confirmed_at' => null,
-            /* @end-chisel-2fa */
         ];
     }
 
-    /**
-     * Indicate that the model's email address should be unverified.
-     */
-    public function unverified(): static
+    public function administrador(): static
     {
         return $this->state(fn (array $attributes) => [
-            'email_verified_at' => null,
+            'rol' => Usuario::ROL_ADMINISTRADOR,
         ]);
     }
 
-    /* @chisel-2fa */
-    /**
-     * Indicate that the model has two-factor authentication configured.
-     */
+    public function marketing(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'rol' => Usuario::ROL_MARKETING,
+        ]);
+    }
+
     public function withTwoFactor(): static
     {
         return $this->state(fn (array $attributes) => [
-            'two_factor_secret' => encrypt('secret'),
-            'two_factor_recovery_codes' => encrypt(json_encode(['recovery-code-1'])),
+            'two_factor_secret' => encrypt('JBSWY3DPEHPK3PXP'),
+            'two_factor_recovery_codes' => encrypt(json_encode(['recovery-code-1', 'recovery-code-2'])),
             'two_factor_confirmed_at' => now(),
         ]);
     }
-    /* @end-chisel-2fa */
 }

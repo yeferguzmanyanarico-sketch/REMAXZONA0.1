@@ -3,6 +3,7 @@
 namespace App\Livewire\Admin;
 
 use App\Models\Oficina;
+use App\Support\TelefonoPeru;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Livewire\Attributes\Layout;
@@ -109,6 +110,7 @@ class GestionOficinas extends Component
 
         if ($this->imagenArchivo) {
             $rutaImagenNueva = $this->imagenArchivo->store('oficinas', 'public');
+            app(\App\Services\ServicioOptimizacionImagen::class)->generarWebpDesdeDiscoPublico($rutaImagenNueva, 1000);
             $rutaImagenFinal = $rutaImagenNueva;
         }
 
@@ -116,8 +118,8 @@ class GestionOficinas extends Component
             $oficina->update([
                 'nombre' => trim($this->nombre),
                 'direccion' => $this->normalizarTextoOpcional($this->direccion),
-                'telefono' => $this->normalizarTextoOpcional($this->telefono),
-                'whatsapp' => $this->normalizarTextoOpcional($this->whatsapp),
+                'telefono' => $this->normalizarTextoOpcional($this->telefono) ? TelefonoPeru::formatearConPrefijo($this->telefono) : null,
+                'whatsapp' => $this->normalizarTextoOpcional($this->whatsapp) ? TelefonoPeru::formatearWhatsapp($this->whatsapp) : null,
                 'correo' => $this->normalizarTextoOpcional($this->correo),
                 'horario' => $this->normalizarTextoOpcional($this->horario),
                 'enlace_google_maps' => $this->normalizarTextoOpcional($this->enlace_google_maps),
@@ -153,8 +155,8 @@ class GestionOficinas extends Component
         $this->slug = $oficina->slug;
         $this->nombre = $oficina->nombre;
         $this->direccion = $oficina->direccion ?? '';
-        $this->telefono = $oficina->telefono ?? '';
-        $this->whatsapp = $oficina->whatsapp ?? '';
+        $this->telefono = TelefonoPeru::quitarPrefijo($oficina->telefono);
+        $this->whatsapp = TelefonoPeru::quitarPrefijo($oficina->whatsapp);
         $this->correo = $oficina->correo ?? '';
         $this->horario = $oficina->horario ?? '';
         $this->enlace_google_maps = $oficina->enlace_google_maps ?? '';

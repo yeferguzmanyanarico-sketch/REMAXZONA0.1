@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\ConfiguracionContacto;
 use App\Models\Propiedad;
+use App\Models\Usuario;
 use App\Models\Vendedor;
 use Illuminate\Database\Seeder;
 
@@ -11,6 +12,29 @@ class DatabaseSeeder extends Seeder
 {
     public function run(): void
     {
+        // 0. Usuarios iniciales del panel administrativo
+        Usuario::updateOrCreate(
+            ['correo' => 'admin@remaxzona.com'],
+            [
+                'nombre' => 'Administrador RE/MAX Zona',
+                'password' => 'admin12345',
+                'rol' => Usuario::ROL_ADMINISTRADOR,
+                'activo' => true,
+                'tema' => Usuario::TEMA_CLARO,
+            ]
+        );
+
+        Usuario::updateOrCreate(
+            ['correo' => 'marketing@remaxzona.com'],
+            [
+                'nombre' => 'Marketing RE/MAX Zona',
+                'password' => 'marketing12345',
+                'rol' => Usuario::ROL_MARKETING,
+                'activo' => true,
+                'tema' => Usuario::TEMA_CLARO,
+            ]
+        );
+
         // 1. Configuración única de contacto
         ConfiguracionContacto::obtenerUnica();
 

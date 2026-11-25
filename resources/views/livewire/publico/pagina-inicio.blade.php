@@ -1,7 +1,16 @@
 <div>
     <main id="contenido">
         <section class="hero" id="inicio" aria-labelledby="hero-title">
-            <img class="hero__image" src="{{ $portada->url_imagen }}" alt="Vista panorámica de una propiedad">
+            <x-imagen-optimizada
+                class="hero__image"
+                :ruta="$portada->imagen ?? ''"
+                :src="$portada->url_imagen"
+                alt="Vista panorámica de una propiedad"
+                width="1920"
+                height="1080"
+                :lazy="false"
+                fetchpriority="high"
+            />
             <div class="hero__overlay"></div>
             <div class="hero__content container">
                 <p class="eyebrow">{{ $contacto->nombre_empresa }}</p>
@@ -36,10 +45,13 @@
                                         3.er Puesto
                                     @endif
                                 </span>
-                                <img
-                                    src="{{ $posicion->url_foto_snapshot }}"
+                                <x-imagen-optimizada
+                                    :ruta="$posicion->foto_snapshot ?? ''"
+                                    :src="$posicion->url_foto_snapshot"
                                     alt="{{ $posicion->nombre_completo_snapshot }}, asesor inmobiliario"
-                                >
+                                    width="400"
+                                    height="480"
+                                />
                                 <h3>{{ $posicion->nombre_completo_snapshot }}</h3>
                                 <a
                                     href="https://api.whatsapp.com/send/?phone={{ $posicion->celular_whatsapp_snapshot }}"
@@ -60,7 +72,7 @@
         </section>
 
         <section class="section section--muted" id="propiedades" aria-labelledby="properties-title">
-            <div class="container">
+            <div class="container container--wide">
                 <div class="section-heading">
                     <p class="eyebrow eyebrow--blue">Encuentra tu próximo hogar</p>
                     <h2 id="properties-title">Propiedades destacadas</h2>
@@ -69,8 +81,16 @@
                 <div class="card-grid card-grid--properties" id="featured-properties">
                     @forelse($propiedadesDestacadas as $propiedad)
                         <article class="card property-card">
-                            <img src="{{ $propiedad->url_imagen }}" alt="{{ $propiedad->nombre }}">
-                            <div>
+                            <div class="property-card__media">
+                                <x-imagen-optimizada
+                                    :ruta="$propiedad->imagen ?? ''"
+                                    :src="$propiedad->url_imagen"
+                                    :alt="$propiedad->nombre"
+                                    width="600"
+                                    height="400"
+                                />
+                            </div>
+                            <div class="property-card__body">
                                 <h3>{{ $propiedad->nombre }}</h3>
                                 <p>{{ $propiedad->ubicacion }}</p>
                                 @if($propiedad->precio_formateado)
